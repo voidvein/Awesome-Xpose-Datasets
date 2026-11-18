@@ -1,5 +1,170 @@
 [
   {
+    "id": "reach",
+    "name": "REACH",
+    "year": 2026,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "面向房间角落远距离摄像机的三维手部姿态数据，利用隐藏胸前相机近景与固定相机几何信息生成标注，适合低分辨率、遮挡与手身协同研究。",
+    "modalities": [
+      "RGB",
+      "Multiview",
+      "Video"
+    ],
+    "annotations": [
+      "MANO 手部形状及关节参数",
+      "世界坐标系手部位置",
+      "多相机标定"
+    ],
+    "scale": "50 人；论文 III-A 区分固定相机 1M 视频帧与胸前相机拍手 540K 帧，表 I 记为 540K；不可相加或称独立姿态样本。",
+    "access": "论文声称代码和数据可从项目页获得，但本次项目页未找到明确数据下载入口，实际获取状态未核实。",
+    "license": "数据许可未核实；论文许可不等于数据或样例照片许可。",
+    "url": "https://vision.ist.i.kyoto-u.ac.jp/research/reach/",
+    "sources": [
+      "https://vision.ist.i.kyoto-u.ac.jp/research/reach/",
+      "https://arxiv.org/html/2605.22231v1"
+    ],
+    "notes": "目录年份按 FG 2026 论文。标注由胸前视图检测/估计与多视角几何形成，不应等同全量人工测量真值；论文用 100 帧人工标注验证。胸前相机主要覆盖身体前方可见的手，存在视野限制。模型推理不依赖胸前相机。",
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "REACH: Hand Pose Estimation from Room Corners",
+        "url": "https://arxiv.org/abs/2605.22231",
+        "venue": "FG",
+        "year": 2026
+      }
+    ]
+  },
+  {
+    "id": "gigahands",
+    "name": "GigaHands",
+    "year": 2025,
+    "category": "Hand",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "大规模双手活动和手物交互数据，结合连续姿态、MANO 网格与文本描述，适合姿态估计、动作生成、手部运动描述及多视角重建。",
+    "modalities": [
+      "RGB",
+      "Multiview",
+      "Video",
+      "Text"
+    ],
+    "annotations": [
+      "双手 2D/3D 关键点",
+      "MANO 手部网格与参数",
+      "物体姿态、网格及分割",
+      "文本动作描述与相机参数"
+    ],
+    "scale": "约 34 小时、56 人、417 物体、14k 动作片段、84k 文本描述；3.7M 双手 3D 姿态与 51 视角合计 183M RGB 图像帧，二者不是同一计量单位。",
+    "access": "官方仓库指向 Hugging Face 全量发布（2026-11-07 迁移）；按 session 提供姿态包，视频 tar 字节索引支持选择片段，另有演示序列。",
+    "license": "作者仓库声明 CC BY-NC 4.0；具体数据组件、第三方模型和预览资产仍须分别核验与署名。",
+    "url": "https://github.com/brown-ivl/GigaHands",
+    "sources": [
+      "https://github.com/brown-ivl/GigaHands",
+      "https://arxiv.org/html/2412.04244v2",
+      "https://huggingface.co/datasets/freddie007/GigaHands"
+    ],
+    "notes": "目录年份按 CVPR 2025，首版预印本为 2024；下载迁移并非新论文发表。关键点通过自动二维估计、多视角三角化、平滑和 MANO 拟合产生，不是全量人工真值。需区分原始三角化关键点、归一化 MANO 关键点与物体对齐坐标关键点；不能将多视角图像数当独立姿态数。",
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "GigaHands: A Massive Annotated Dataset of Bimanual Hand Activities",
+        "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Fu_GigaHands_A_Massive_Annotated_Dataset_of_Bimanual_Hand_Activities_CVPR_2025_paper.html",
+        "venue": "CVPR",
+        "year": 2025
+      }
+    ]
+  },
+  {
+    "id": "ego-exo4d",
+    "name": "Ego-Exo4D",
+    "year": 2024,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "同步第一与第三人称技能活动视频，EgoPose 子任务提供手部和人体关键点，适合研究真实活动中的遮挡、多视角融合与第一人称姿态估计。",
+    "modalities": [
+      "RGB",
+      "Monochrome",
+      "Multiview",
+      "Video",
+      "IMU"
+    ],
+    "annotations": [
+      "有效时间戳的全局 3D 关键点",
+      "对应 ego/exo 视图的 2D 关键点",
+      "相机内外参数"
+    ],
+    "scale": "完整数据为 740 名佩戴者、1,286.3 小时 ego+exo 视频；并非全部具有姿态标注，手部/身体标注子集规模应按版本单独核对。",
+    "access": "访问已转至 Lab22，需申请并接受许可；官方说明审批通常约 48 小时。获准后通过 CLI 可按 handpose/bodypose 下载标注。",
+    "license": "采用专门数据许可并有限制再分发等条款；免费访问不等于可无条件复制，不代申请人签署。",
+    "url": "https://ego-exo4d-data.org/",
+    "sources": [
+      "https://ego-exo4d-data.org/",
+      "https://docs.ego-exo4d-data.org/annotations/ego_pose/",
+      "https://docs.ego-exo4d-data.org/getting-started/"
+    ],
+    "notes": "目录年份按 CVPR 2024 论文，非数据版本更新年份。V1/V2 的 EgoPose 在有效时间戳提供标注，不能将总视频量当作手/身体人工标注样本数。以一个条目跨 Hand/Human 展示并按唯一 ID 计数；评测应采用相应 benchmark 官方划分。",
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives",
+        "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Grauman_Ego-Exo4D_Understanding_Skilled_Human_Activity_from_First-_and_Third-Person_Perspectives_CVPR_2024_paper.html",
+        "venue": "CVPR",
+        "year": 2024
+      }
+    ],
+    "categories": [
+      "Hand",
+      "Human"
+    ]
+  },
+  {
+    "id": "egobody3m",
+    "name": "EgoBody3M",
+    "year": 2024,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "使用 VR 头显四个单色 SLAM 相机的真实图像身体跟踪数据，用于无控制器全身估计及利用时间信息恢复视野外肢体。",
+    "modalities": [
+      "Monochrome",
+      "Multiview",
+      "Video"
+    ],
+    "annotations": [
+      "26 个身体关节的世界坐标（厘米）",
+      "各相机投影关节位置",
+      "头显跟踪变换与帧索引"
+    ],
+    "scale": "论文报告超过 30 小时、300 万帧；多相机图像与身体姿态的计数口径不应混同。",
+    "access": "官方 GitHub 提供按序列的图像/元数据下载脚本与 sample_data；本轮未下载完整数据。",
+    "license": "官方仓库明确数据为 CC BY-NC 4.0；再使用应署名、标明修改并满足非商业限制，另核具体资产及人物权益。",
+    "url": "https://github.com/facebookresearch/EgoBody3M",
+    "sources": [
+      "https://github.com/facebookresearch/EgoBody3M",
+      "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/10261.pdf"
+    ],
+    "notes": "目录年份按 ECCV 2024 论文，不代表所有压缩包的发布日期。与 EgoBody 2022 是不同项目。2D 为三维关节的相机投影，不应当作独立人工二维标注；注意鱼眼模型、相机后方点以及厘米/米单位。",
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "EgoBody3M: Egocentric Body Tracking on a VR Headset using a Diverse Dataset",
+        "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/10261.pdf",
+        "venue": "ECCV",
+        "year": 2024
+      }
+    ]
+  },
+  {
     "id": "hot3d",
     "name": "HOT3D",
     "year": 2024,
@@ -406,7 +571,7 @@
       "2D",
       "3D"
     ],
-    "summary": "野外密集三维头部对齐数据，含头部顶点以及模型视图、投影矩阵。",
+    "summary": "多来源野外人脸图像的密集三维头部对齐数据，通过人工放置对应点并拟合头部模型获得标注，覆盖姿态、表情、遮挡及低质量图像。",
     "modalities": [
       "RGB"
     ],
@@ -415,20 +580,66 @@
       "模型视图/投影矩阵",
       "脸框与属性"
     ],
-    "scale": "总量本轮未核实",
-    "access": "作者仓库链接至作者 Hugging Face 数据发布",
-    "license": "数据许可未核实，请按官方条款使用",
+    "scale": "44,898 张图像：37,840 训练、4,312 验证、2,746 测试",
+    "access": "作者页面提供申请入口；Hugging Face 数据卡要求机构邮箱并同意研究条款，非无需审核的直接下载。",
+    "license": "数据卡标记 CC BY-NC-SA 4.0，同时规定仅非商业研究教育、不得向直属研究组以外转交等额外条款；须以完整协议为准，不能仅据 CC 标签判断使用范围。",
     "url": "https://github.com/PinataFarms/DAD-3DHeads",
     "sources": [
-      "https://github.com/PinataFarms/DAD-3DHeads"
+      "https://github.com/PinataFarms/DAD-3DHeads",
+      "https://www.pinatafarm.com/research/dad-3dheads/dataset",
+      "https://huggingface.co/datasets/t-martyniuk/DAD-3DHeadsDataset/blob/main/README.md",
+      "https://openaccess.thecvf.com/content/CVPR2022/papers/Martyniuk_DAD-3DHeads_A_Large-Scale_Dense_Accurate_and_Diverse_Dataset_for_3D_CVPR_2022_paper.pdf"
     ],
-    "notes": "仓库代码许可不能自动代表原始图像许可。",
+    "notes": "标注来自人工约束及 FLAME 模型拟合，不是逐点直接扫描测量。评测应保持官方 train/validation/test 划分并关注遮挡、表情等属性子组。原始图像来自不同来源，代码许可不能自动代表图像再发布许可。",
     "verified_at": "2026-11-18",
     "papers": [
       {
         "title": "DAD-3DHeads: A Large-Scale Dense, Accurate and Diverse Dataset for 3D Head Alignment From a Single Image",
         "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Martyniuk_DAD-3DHeads_A_Large-Scale_Dense_Accurate_and_Diverse_Dataset_for_3D_CVPR_2022_paper.html",
         "venue": "CVPR",
+        "year": 2022
+      }
+    ]
+  },
+  {
+    "id": "egobody",
+    "name": "EgoBody",
+    "year": 2022,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "同步 HoloLens2 与外部 RGB-D 相机捕捉室内社会交互，为佩戴者及交互对象提供身体姿态、形状和运动，支持第一人称场景中的人体重建。",
+    "modalities": [
+      "RGB",
+      "Depth",
+      "RGB-D",
+      "Multiview",
+      "Video",
+      "Eye gaze"
+    ],
+    "annotations": [
+      "双方 SMPL/SMPL-X 身体姿态与形状",
+      "同步第一/第三人称图像",
+      "HoloLens2 眼动、头手跟踪流"
+    ],
+    "scale": "125 段序列、36 人、15 个室内场景；219,731 第三人称同步 RGB-D 帧与 199,111 第一人称 RGB 帧分别统计。",
+    "access": "官方数据站需注册并签署许可后下载；本轮未申请或下载受限数据。",
+    "license": "须遵守 EgoBody 专门协议及学术用途、再分发限制；不能仅按一般 CC BY-NC-SA 标签使用，更不能套用 EgoBody3M 的许可。",
+    "url": "https://sanweiliti.github.io/egobody/egobody.html",
+    "sources": [
+      "https://sanweiliti.github.io/egobody/egobody.html",
+      "https://egobody.ethz.ch/",
+      "https://github.com/sanweiliti/EgoBody",
+      "https://arxiv.org/abs/2112.07642"
+    ],
+    "notes": "目录年份按 ECCV 2022 正式论文，预印本为 2021 年。多视图帧不应相加作为独立时间点。HoloLens2 的头手跟踪不自动等于独立 Head/Hand 评测集；Motion-X 文本标签是另行提供的扩展，需核对其许可。",
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "EgoBody: Human Body Shape and Motion of Interacting People from Head-Mounted Devices",
+        "url": "https://arxiv.org/abs/2112.07642",
+        "venue": "ECCV",
         "year": 2022
       }
     ]
@@ -1444,6 +1655,40 @@
     ]
   },
   {
+    "id": "menpo2d",
+    "name": "Menpo2D",
+    "year": 2017,
+    "category": "Head",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "分别处理半正面与侧面的人脸关键点定位基准。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "半正面 68 点",
+      "侧面 39 点"
+    ],
+    "scale": "训练 6,653 半正面 + 2,290 侧面；测试 5,335 + 1,946",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "作者要求遵守各原始图像数据集许可",
+    "url": "https://github.com/jiankangdeng/MenpoBenchmark",
+    "sources": [
+      "https://github.com/jiankangdeng/MenpoBenchmark"
+    ],
+    "notes": "此条仅统计作者仓库中的 Menpo2D 图像划分，不合并 300W、COFW 或 Menpo3D。",
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "The Menpo Facial Landmark Localisation Challenge: A Step Towards the Solution",
+        "url": "https://openaccess.thecvf.com/content_cvpr_2017_workshops/w33/papers/Zafeiriou_The_Menpo_Facial_CVPR_2017_paper.pdf",
+        "venue": "CVPR Workshops",
+        "year": 2017
+      }
+    ]
+  },
+  {
     "id": "mpi-inf-3dhp",
     "name": "MPI-INF-3DHP",
     "year": 2017,
@@ -1475,40 +1720,6 @@
         "title": "Monocular 3D Human Pose Estimation In The Wild Using Improved CNN Supervision",
         "url": "https://arxiv.org/abs/1611.09813",
         "venue": "3DV",
-        "year": 2017
-      }
-    ]
-  },
-  {
-    "id": "menpo2d",
-    "name": "Menpo2D",
-    "year": 2017,
-    "category": "Head",
-    "dimensions": [
-      "2D"
-    ],
-    "summary": "分别处理半正面与侧面的人脸关键点定位基准。",
-    "modalities": [
-      "RGB"
-    ],
-    "annotations": [
-      "半正面 68 点",
-      "侧面 39 点"
-    ],
-    "scale": "训练 6,653 半正面 + 2,290 侧面；测试 5,335 + 1,946",
-    "access": "官方页面提供下载入口；本轮未实际下载",
-    "license": "作者要求遵守各原始图像数据集许可",
-    "url": "https://github.com/jiankangdeng/MenpoBenchmark",
-    "sources": [
-      "https://github.com/jiankangdeng/MenpoBenchmark"
-    ],
-    "notes": "此条仅统计作者仓库中的 Menpo2D 图像划分，不合并 300W、COFW 或 Menpo3D。",
-    "verified_at": "2026-11-18",
-    "papers": [
-      {
-        "title": "The Menpo Facial Landmark Localisation Challenge: A Step Towards the Solution",
-        "url": "https://openaccess.thecvf.com/content_cvpr_2017_workshops/w33/papers/Zafeiriou_The_Menpo_Facial_CVPR_2017_paper.pdf",
-        "venue": "CVPR Workshops",
         "year": 2017
       }
     ]
@@ -1791,16 +2002,18 @@
     ],
     "annotations": [
       "5 点二维关键点",
-      "40 个面部属性"
+      "作者数据页列 40 个面部属性；TPAMI 实验描述 22 项二值属性"
     ],
-    "scale": "20,000 图",
+    "scale": "20,000 张人脸图像；19,000 训练、1,000 测试（TPAMI 论文划分）",
     "access": "官方页面提供下载入口；本轮未实际下载",
     "license": "数据许可未核实，请按官方条款使用",
     "url": "https://mmlab.ie.cuhk.edu.hk/projects/TCDCN.html",
     "sources": [
-      "https://mmlab.ie.cuhk.edu.hk/projects/TCDCN.html"
+      "https://mmlab.ie.cuhk.edu.hk/projects/TCDCN.html",
+      "https://zhzhanp.github.io/papers/TPAMI2016.pdf",
+      "https://www.robots.ox.ac.uk/~vedaldi/assets/pubs/thewlis17unsupervised.pdf"
     ],
-    "notes": "年份采用作者主页公开数据说明的 2016 年；与 MTFL 是不同条目。",
+    "notes": "年份采用作者主页 2016 年公开数据说明，与 MTFL 是不同条目。MAFL 抽自 Celebrity face 数据；MAFL 测试图与 CelebA 训练集存在部分重叠，使用 CelebA 预训练后在 MAFL 评测时应排除重叠测试样本，不能视作完全独立数据源。作者网页列 40 属性，TPAMI 论文第 4.1 节写 22 个二值属性，差异原因未核实，本文分别保留来源口径。",
     "verified_at": "2026-11-18",
     "papers": [
       {
@@ -2099,6 +2312,47 @@
         "title": "300 Faces in-the-Wild Challenge: The First Facial Landmark Localization Challenge",
         "url": "https://ibug.doc.ic.ac.uk/media/uploads/documents/sagonas_iccv_2013_300_w.pdf",
         "venue": "ICCV Workshops",
+        "year": 2013
+      }
+    ]
+  },
+  {
+    "id": "biwi-kinect-head-pose",
+    "name": "BIWI Kinect Head Pose",
+    "year": 2013,
+    "category": "Head",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "Kinect RGB-D 头部姿态基准，提供头部三维位置和旋转，适合 RGB、深度及跨模态头姿估计和人物独立评测。",
+    "modalities": [
+      "RGB",
+      "Depth",
+      "RGB-D",
+      "Video"
+    ],
+    "annotations": [
+      "3D 头部位置",
+      "头部旋转",
+      "RGB 与深度对应帧",
+      "序列到受试者身份映射"
+    ],
+    "scale": "约 15,000 帧、24 段序列、20 人；其中 4 人录制两次，序列数不等于身份数。",
+    "access": "ETH 数据卡和加载脚本提供原始数据入口；本轮未实际下载数据包，使用前检查入口与格式。",
+    "license": "数据限非商业用途，例如大学研究和教育；加载脚本的 Apache 许可并非数据或样例图许可。",
+    "url": "https://huggingface.co/datasets/ETHZurich/biwi_kinect_head_pose",
+    "sources": [
+      "https://huggingface.co/datasets/ETHZurich/biwi_kinect_head_pose",
+      "https://huggingface.co/datasets/ETHZurich/biwi_kinect_head_pose/blob/main/biwi_kinect_head_pose.py",
+      "https://is.mpg.de/ps/publications/fdgf12"
+    ],
+    "notes": "目录年份按加载脚本引用的 IJCV 2013 卷期（论文于 2012 年在线发表），不能视作首次数据公开年份。跨序列划分可能让同一人物进入训练与测试，应使用 sequence-to-subject 映射核查身份泄漏，并报告实际协议。旋转表示、坐标轴和角度约定须与官方标注一致。",
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Random Forests for Real Time 3D Face Analysis",
+        "url": "https://doi.org/10.1007/s11263-012-0549-0",
+        "venue": "International Journal of Computer Vision",
         "year": 2013
       }
     ]

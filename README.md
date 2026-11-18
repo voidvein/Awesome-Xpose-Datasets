@@ -6,7 +6,7 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 ## Scope
 
-52 datasets: Head 16, Hand 17, Human 19. Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
+58 datasets: Head 17, Hand 20, Human 22 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
 
 ## Run and validate
 
@@ -21,6 +21,8 @@ Run `node --check app.js && node scripts/test.cjs`.
 ## Catalogue
 
 ### Head
+
+- **[BIWI Kinect Head Pose](https://huggingface.co/datasets/ETHZurich/biwi_kinect_head_pose)** · 2013 · 3D — Kinect RGB-D 头部姿态基准，提供头部三维位置和旋转，适合 RGB、深度及跨模态头姿估计和人物独立评测。
 
 - **[DAD-3DHeads](https://github.com/PinataFarms/DAD-3DHeads)** · 2022 · 2D/3D — 野外密集三维头部对齐数据，含头部顶点以及模型视图、投影矩阵。
 - **[FaceSynthetics](https://github.com/microsoft/FaceSynthetics)** · 2021 · 2D — 可控制生成的人脸图像，提供关键点和像素分割，面向合成到真实迁移。
@@ -41,6 +43,10 @@ Run `node --check app.js && node scripts/test.cjs`.
 
 ### Hand
 
+- **[REACH](https://vision.ist.i.kyoto-u.ac.jp/research/reach/)** · 2026 · 3D — 面向房间角落远距离摄像机的三维手部姿态数据，利用隐藏胸前相机近景与固定相机几何信息生成标注，适合低分辨率、遮挡与手身协同研究。
+- **[GigaHands](https://github.com/brown-ivl/GigaHands)** · 2025 · 2D/3D — 大规模双手活动和手物交互数据，结合连续姿态、MANO 网格与文本描述，适合姿态估计、动作生成、手部运动描述及多视角重建。
+- **[Ego-Exo4D](https://ego-exo4d-data.org/)** · 2024 · 2D/3D — 同步第一与第三人称技能活动视频，EgoPose 子任务提供手部和人体关键点，适合研究真实活动中的遮挡、多视角融合与第一人称姿态估计。
+
 - **[HOT3D](https://facebookresearch.github.io/hot3d/)** · 2024 · 3D — 头戴多视角相机捕获手物交互，面向第一人称三维跟踪。
 - **[OakInk2](https://oakink.net/v2/)** · 2024 · 3D — 复杂任务中的双手物体操作，加入文本目标、动作原语和依赖图。
 - **[ARCTIC](https://arctic.is.tue.mpg.de/)** · 2023 · 3D — 双手灵巧操作可动关节物体，强调同步运动与动态接触。
@@ -60,6 +66,10 @@ Run `node --check app.js && node scripts/test.cjs`.
 - **[NYU Hand Pose](https://jonathantompson.github.io/NYU_Hand_Pose_Dataset.htm)** · 2014 · 2D/3D — 三视角 RGB-D 手姿基准，提供实拍与合成重建，适合深度姿态估计。
 
 ### Human
+
+- **[Ego-Exo4D](https://ego-exo4d-data.org/)** · 2024 · 2D/3D — 同步第一与第三人称技能活动视频，EgoPose 子任务提供手部和人体关键点，适合研究真实活动中的遮挡、多视角融合与第一人称姿态估计。
+- **[EgoBody3M](https://github.com/facebookresearch/EgoBody3M)** · 2024 · 2D/3D — 使用 VR 头显四个单色 SLAM 相机的真实图像身体跟踪数据，用于无控制器全身估计及利用时间信息恢复视野外肢体。
+- **[EgoBody](https://sanweiliti.github.io/egobody/egobody.html)** · 2022 · 3D — 同步 HoloLens2 与外部 RGB-D 相机捕捉室内社会交互，为佩戴者及交互对象提供身体姿态、形状和运动，支持第一人称场景中的人体重建。
 
 - **[EMDB](https://eth-ait.github.io/emdb/)** · 2023 · 3D — 面向真实室内外场景的三维人体姿态与形状数据集，同时提供人体根节点及相机的全局运动轨迹。
 
