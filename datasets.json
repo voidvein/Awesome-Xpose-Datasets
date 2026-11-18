@@ -535,24 +535,29 @@
       "2D",
       "3D"
     ],
-    "summary": "面向自然场景上半身表达的全身模型/关键点数据，支持手脸与身体联合研究。",
+    "summary": "覆盖 15 类真实场景的上半身视频数据，面向身体、手部及人脸联合重建；三维标注是模型拟合伪标签，而非直接测量真值。",
     "modalities": [
       "RGB",
       "视频"
     ],
     "annotations": [
-      "二维全身关键点",
-      "SMPL-X 参数"
+      "二维全身关键点（模型估计）",
+      "SMPL-X 参数（迭代拟合伪标签）",
+      "帧有效性标签",
+      "人体及手部边界框"
     ],
-    "scale": "本轮未核实统一规模",
-    "access": "OSX 官方仓库 Data 链接",
-    "license": "数据许可待核实；不可直接沿用代码 MIT",
-    "url": "https://github.com/IDEA-Research/OSX",
+    "scale": "2023 年论文表 1 报告 >1051K 帧、15 类场景；这是原论文统计，当前可下载包的帧数未独立核验。",
+    "access": "官网 Data 入口需填写邮箱注册并接受数据协议；官方仓库已宣布 V1 发布，V2 人工边界框仍列为后续计划。",
+    "license": "官方注册协议限非商业研究使用；代码 MIT 和论文许可不等同于数据、原视频或预览图片许可。",
+    "url": "https://osx-ubody.github.io/",
     "sources": [
-      "https://github.com/IDEA-Research/OSX"
+      "https://osx-ubody.github.io/",
+      "https://arxiv.org/html/2303.16160v1",
+      "https://github.com/IDEA-Research/OSX",
+      "https://docs.google.com/forms/d/e/1FAIpQLSehgBP7wdn_XznGAM2AiJPiPLTqXXHw5uX9l7qeQ1Dh9HoO_A/viewform"
     ],
-    "notes": "2023 年发布 UBody-V1；区分上半身可见图像与完整可见全身数据。",
-    "verified_at": "2026-11-18",
+    "notes": "附录 D：场内划分以视频为单位，每场景前 70% 训练、后 30% 测试；场景间划分为 10 类训练、5 类测试。2D 关键点估计后，以 OSX 初始化 SMPL-X 并迭代修订拟合。适合检验遮挡、截断及跨场景泛化，但应报告伪标签偏差，不能将拟合误差解释为对实测三维真值的误差；上半身可见不等于完整全身均可见。",
+    "verified_at": "2026-11-19",
     "papers": [
       {
         "title": "One-Stage 3D Whole-Body Mesh Recovery with Component Aware Transformer",
