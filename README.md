@@ -6,7 +6,7 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 ## Scope
 
-58 datasets: Head 17, Hand 20, Human 22 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
+59 datasets: Head 17, Hand 21, Human 22 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
 
 ## Run and validate
 
@@ -42,6 +42,8 @@ Run `node --check app.js && node scripts/test.cjs`.
 - **[Pointing’04 / Head Pose Image Database](https://crowley-coutaz.fr/Head%20Pose%20Image%20Database.html)** · 2004 · 3D — 以离散 pan/tilt 角度采集的经典单目头姿基准。
 
 ### Hand
+
+- **[AnyHand](https://chen-si-cs.github.io/projects/AnyHand/)** · 2026 · 2D/3D — 已公开合成 RGB-D 手部与交互数据；详见条目中的规模冲突、深度来源及非商业许可说明。
 
 - **[REACH](https://vision.ist.i.kyoto-u.ac.jp/research/reach/)** · 2026 · 3D — 面向房间角落远距离摄像机的三维手部姿态数据，利用隐藏胸前相机近景与固定相机几何信息生成标注，适合低分辨率、遮挡与手身协同研究。
 - **[GigaHands](https://github.com/brown-ivl/GigaHands)** · 2025 · 2D/3D — 大规模双手活动和手物交互数据，结合连续姿态、MANO 网格与文本描述，适合姿态估计、动作生成、手部运动描述及多视角重建。
