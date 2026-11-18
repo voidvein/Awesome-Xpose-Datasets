@@ -6,7 +6,7 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 ## Scope
 
-51 datasets: Head 16, Hand 17, Human 18. Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
+52 datasets: Head 16, Hand 17, Human 19. Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
 
 ## Run and validate
 
@@ -61,6 +61,8 @@ Run `node --check app.js && node scripts/test.cjs`.
 
 ### Human
 
+- **[EMDB](https://eth-ait.github.io/emdb/)** · 2023 · 3D — 面向真实室内外场景的三维人体姿态与形状数据集，同时提供人体根节点及相机的全局运动轨迹。
+
 - **[BEDLAM](https://bedlam.is.tue.mpg.de/)** · 2023 · 2D/3D — 带真实感服装、灯光和相机运动的合成人体视频，包含 SMPL-X 真值。
 - **[H3WB](https://github.com/wholebody3d/wholebody3d)** · 2023 · 2D/3D — 扩展 Human3.6M 为三维全身关键点，支持 RGB 到三维与二维 lifting。
 - **[UBody](https://github.com/IDEA-Research/OSX)** · 2023 · 2D/3D — 面向自然场景上半身表达的全身模型/关键点数据，支持手脸与身体联合研究。
@@ -83,3 +85,7 @@ Run `node --check app.js && node scripts/test.cjs`.
 ## Contribution and provenance
 
 Use primary project, institution or paper sources. Preserve version-specific quantities and distinguish images, frames, sequences and subjects. Do not infer commercial rights from public availability, apply paper CCF ratings to datasets, or invent star/download metrics. Interface styling is shared with Awesome-Xpose-estimation.
+
+## Official dataset previews
+
+Nine original image assets across five datasets are currently verified for display. The remaining records link to their official examples, rather than reproducing images without verified permission. See [image provenance and licensing](IMAGE_GUIDE.md) and [asset manifest](assets/previews/manifest.json). Images retain their own licenses, separate from original dataset terms.

@@ -120,6 +120,66 @@
     "verified_at": "2026-11-18"
   },
   {
+    "id": "emdb",
+    "name": "EMDB",
+    "year": 2023,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "面向真实室内外场景的三维人体姿态与形状数据集，同时提供人体根节点及相机的全局运动轨迹。",
+    "modalities": [
+      "RGB",
+      "无线电磁传感器（采集阶段）"
+    ],
+    "annotations": [
+      "SMPL 姿态与形状参数",
+      "全局人体根轨迹",
+      "全局相机位姿"
+    ],
+    "scale": "58 分钟；81 段室内外序列；10 名参与者",
+    "access": "机构邮箱填写官方申请表；获批后收到下载说明",
+    "license": "数据集：ETH Zurich 自定义非商业学术许可，禁止再分发；网站展示图：CC BY-SA 4.0；工具代码：MIT（各自独立）",
+    "url": "https://eth-ait.github.io/emdb/",
+    "sources": [
+      "https://eth-ait.github.io/emdb/",
+      "https://emdb.ait.ethz.ch/",
+      "https://github.com/eth-ait/emdb"
+    ],
+    "notes": "ICCV 2023。适合研究单目三维人体恢复与全局轨迹估计。不要把网站的 CC BY-SA 许可或工具代码的 MIT 许可套用到原始数据集；规模不是独立身份或图像数量。",
+    "verified_at": "2026-11-18",
+    "full_title": "EMDB: The Electromagnetic Database of Global 3D Human Pose and Shape in the Wild",
+    "authors": [
+      "Manuel Kaufmann",
+      "Jie Song",
+      "Chen Guo",
+      "Kaiyue Shen",
+      "Tianjian Jiang",
+      "Chengcheng Tang",
+      "Juan José Zárate",
+      "Otmar Hilliges"
+    ],
+    "venue": "ICCV",
+    "code_url": "https://github.com/eth-ait/emdb",
+    "download_url": "https://emdb.ait.ethz.ch/",
+    "images": [
+      {
+        "src": "assets/previews/emdb-teaser.jpg",
+        "source": "https://eth-ait.github.io/emdb/",
+        "asset_url": "https://files.ait.ethz.ch/projects/emdb/assets/teaser.jpg",
+        "alt": "EMDB 官方展示图：真实场景人物、拟合人体网格和相机及人体全局轨迹",
+        "caption": "EMDB 官方项目展示图：真实场景人体、重建结果及全局轨迹示例。",
+        "attribution": "Manuel Kaufmann, Jie Song, Chen Guo, Kaiyue Shen, Tianjian Jiang, Chengcheng Tang, Juan José Zárate, Otmar Hilliges — EMDB (ICCV 2023)",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "verified_at": "2026-11-18",
+        "modifications": "原始文件完整复制；未裁剪、未重绘、未改色。",
+        "rights_evidence": "作者项目网站整体的明确 CC BY-SA 4.0 声明；此图为该网站直接嵌入的 teaser，未见该图单独排除声明。不是通过原始数据集许可或代码许可推断。 网站声明未逐张列出许可；该判断依赖网站整体许可覆盖其自有 teaser。第三方权利、人物肖像等不因 CC 自动消除。保留完整原图、来源、作者、许可；修改版本注明修改且保持同一许可。不要将本条说明用作原始数据再分发许可。",
+        "sha256": "09da5505008f5596f6abb637e2eb6f12bcf64613d8bdf9db51b7d74fe682d6f1"
+      }
+    ]
+  },
+  {
     "id": "h3wb",
     "name": "H3WB",
     "year": 2023,
@@ -175,7 +235,24 @@
       "https://mks0601.github.io/ReInterHand/"
     ],
     "notes": "图像由重光照渲染，不应标为完全原始实拍；不同 envmap 与视角配置需分开报告。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "images": [
+      {
+        "src": "assets/previews/reinterhand-ego.gif",
+        "source": "https://mks0601.github.io/ReInterHand/assets/Ego_cameras/m--20210701--1058--0000000--pilot--relightablehandsy--participant0--two-hands.gif",
+        "source_page": "https://mks0601.github.io/ReInterHand/",
+        "alt": "Re:InterHand 第一人称双手交互重光照数据可视化",
+        "caption": "官方 envmap_per_segment 动画样例；重光照渲染，不是完全原始实拍。",
+        "attribution": "Gyeongsik Moon et al. — A Dataset of Relighted 3D Interacting Hands (NeurIPS Datasets and Benchmarks 2023)",
+        "license": "CC BY-NC 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "verified_at": "2026-11-18",
+        "modifications": "原文件复制，无裁剪、重绘或内容修改",
+        "rights_evidence": "官方数据页 Visualizations 区域直接列出此数据 GIF，License 区域明确 Re:InterHand is CC-BY-NC 4.0 licensed。遵循非商业及署名条件；无单独更宽松图片许可。",
+        "sha256": "4c79b9a334286611fdf34d5d645d13c0bd9301b3674600475ada526b9c5d756d",
+        "noncommercial": true
+      }
+    ]
   },
   {
     "id": "ubody",
@@ -405,7 +482,73 @@
       "https://github.com/microsoft/FaceSynthetics"
     ],
     "notes": "公开标签是三维点的二维投影，非传统轮廓滑动标注；不能据此宣称公开完整三维网格。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "images": [
+      {
+        "src": "assets/previews/face-synthetics-samples.jpg",
+        "source": "https://arxiv.org/html/2109.15102v2",
+        "asset_url": "https://arxiv.org/html/2109.15102v2/figures/dataset_samples.jpg",
+        "alt": "四行合成人脸样例，包含不同发型、表情、光照、眼镜、帽子和口罩",
+        "caption": "Figure 11：随机生成并渲染的合成训练人脸示例。",
+        "attribution": "Erroll Wood, Tadas Baltrušaitis, Charlie Hewitt, Sebastian Dziadzio, Matthew Johnson, Virginia Estellers, Thomas J. Cashman, Jamie Shotton — Fake It Till You Make It (2021)",
+        "license": "CC BY-NC-SA 4.0（论文插图）",
+        "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "verified_at": "2026-11-18",
+        "version": "arXiv:2109.15102v2",
+        "modifications": "作者发布的原始 JPEG 插图或面板；未裁剪、未重绘、未改色。",
+        "rights_evidence": "arXiv:2109.15102v2 明确 CC BY-NC-SA 4.0；Fig1 为合成人像渲染/几何/标签面板，Fig11 为合成样例。图片许可不等同于原始数据集 R-UDA 许可。",
+        "sha256": "3f916f5dc082afb27ab0d12fa7e57d77f785a3eef74f344d69ecb37a08813cd3",
+        "noncommercial": true
+      },
+      {
+        "src": "assets/previews/face-synthetics-render.jpg",
+        "source": "https://arxiv.org/html/2109.15102v2",
+        "asset_url": "https://arxiv.org/html/2109.15102v2/figures/hero_figures/iccv21_hero_render.jpg",
+        "alt": "合成人像的彩色写实渲染，展示头发、皮肤与衣物细节",
+        "caption": "Figure 1：合成人像渲染面板。",
+        "attribution": "Erroll Wood, Tadas Baltrušaitis, Charlie Hewitt, Sebastian Dziadzio, Matthew Johnson, Virginia Estellers, Thomas J. Cashman, Jamie Shotton — Fake It Till You Make It (2021)",
+        "license": "CC BY-NC-SA 4.0（论文插图）",
+        "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "verified_at": "2026-11-18",
+        "version": "arXiv:2109.15102v2",
+        "modifications": "作者发布的原始 JPEG 插图或面板；未裁剪、未重绘、未改色。",
+        "rights_evidence": "arXiv:2109.15102v2 明确 CC BY-NC-SA 4.0；Fig1 为合成人像渲染/几何/标签面板，Fig11 为合成样例。图片许可不等同于原始数据集 R-UDA 许可。",
+        "sha256": "f922e0ea1b27d5dae5e5858ed0c2445e33dbf8e171280ea70292deea7095e1a8",
+        "noncommercial": true
+      },
+      {
+        "src": "assets/previews/face-synthetics-geometry.jpg",
+        "source": "https://arxiv.org/html/2109.15102v2",
+        "asset_url": "https://arxiv.org/html/2109.15102v2/figures/hero_figures/iccv21_hero_render_clay.jpg",
+        "alt": "同一合成人像的灰白色几何渲染，保留面部、头发与衣物形状",
+        "caption": "Figure 1：对应的几何渲染面板。",
+        "attribution": "Erroll Wood, Tadas Baltrušaitis, Charlie Hewitt, Sebastian Dziadzio, Matthew Johnson, Virginia Estellers, Thomas J. Cashman, Jamie Shotton — Fake It Till You Make It (2021)",
+        "license": "CC BY-NC-SA 4.0（论文插图）",
+        "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "verified_at": "2026-11-18",
+        "version": "arXiv:2109.15102v2",
+        "modifications": "作者发布的原始 JPEG 插图或面板；未裁剪、未重绘、未改色。",
+        "rights_evidence": "arXiv:2109.15102v2 明确 CC BY-NC-SA 4.0；Fig1 为合成人像渲染/几何/标签面板，Fig11 为合成样例。图片许可不等同于原始数据集 R-UDA 许可。",
+        "sha256": "5898c61f4aa68cbf1d1eae614aa9187e0d2a32009ef0bfa6323148eb06ed7e9b",
+        "noncommercial": true
+      },
+      {
+        "src": "assets/previews/face-synthetics-labels.jpg",
+        "source": "https://arxiv.org/html/2109.15102v2",
+        "asset_url": "https://arxiv.org/html/2109.15102v2/figures/hero_figures/iccv21_hero_render_gt_2.jpg",
+        "alt": "同一合成人像的彩色分区标签与白色面部轮廓标注",
+        "caption": "Figure 1：对应的标签展示面板。",
+        "attribution": "Erroll Wood, Tadas Baltrušaitis, Charlie Hewitt, Sebastian Dziadzio, Matthew Johnson, Virginia Estellers, Thomas J. Cashman, Jamie Shotton — Fake It Till You Make It (2021)",
+        "license": "CC BY-NC-SA 4.0（论文插图）",
+        "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "verified_at": "2026-11-18",
+        "version": "arXiv:2109.15102v2",
+        "modifications": "作者发布的原始 JPEG 插图或面板；未裁剪、未重绘、未改色。",
+        "rights_evidence": "arXiv:2109.15102v2 明确 CC BY-NC-SA 4.0；Fig1 为合成人像渲染/几何/标签面板，Fig11 为合成样例。图片许可不等同于原始数据集 R-UDA 许可。",
+        "sha256": "c44ba0ae95a02c54b563744830a1829b167ffd8749506f83d52243b57142591e",
+        "noncommercial": true
+      }
+    ]
   },
   {
     "id": "h2o",
@@ -553,7 +696,39 @@
       "https://mks0601.github.io/InterHand2.6M/"
     ],
     "notes": "必须注明 5 fps/30 fps 及 H/M/H+M 标注组合；MANO 拟合不等同于直接扫描真值。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "images": [
+      {
+        "src": "assets/previews/interhand26m-mano1.jpg",
+        "source": "https://raw.githubusercontent.com/facebookresearch/InterHand2.6M/main/assets/mano1.jpg",
+        "source_page": "https://github.com/facebookresearch/InterHand2.6M",
+        "alt": "双手交互图像上的 MANO 网格拟合可视化",
+        "caption": "InterHand2.6M 官方 MANO 拟合样例；网格是拟合标注，不是原始扫描。",
+        "attribution": "Gyeongsik Moon, Shoou-I Yu, He Wen, Takaaki Shiratori, Kyoung Mu Lee — InterHand2.6M (ECCV 2020)",
+        "license": "CC BY-NC 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "verified_at": "2026-11-18",
+        "modifications": "原文件复制，无裁剪、重绘或内容修改",
+        "rights_evidence": "官方 README 直接嵌入 assets/mano1.jpg，并声明 InterHand2.6M is CC-BY-NC 4.0 licensed；同仓库 LICENSE 为 CC Attribution-NonCommercial 4.0，不是代码 MIT/GPL 推断。非商业展示并署名、链接许可。",
+        "sha256": "2d4b7578dcd1f9b3cd5dae794deefd8ea3738e27910f988950279403063cec06",
+        "noncommercial": true
+      },
+      {
+        "src": "assets/previews/interhand26m-mano2.jpg",
+        "source": "https://raw.githubusercontent.com/facebookresearch/InterHand2.6M/main/assets/mano2.jpg",
+        "source_page": "https://github.com/facebookresearch/InterHand2.6M",
+        "alt": "双手交互图像上的 MANO 网格拟合可视化",
+        "caption": "InterHand2.6M 官方 MANO 拟合样例；网格是拟合标注，不是原始扫描。",
+        "attribution": "Gyeongsik Moon, Shoou-I Yu, He Wen, Takaaki Shiratori, Kyoung Mu Lee — InterHand2.6M (ECCV 2020)",
+        "license": "CC BY-NC 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "verified_at": "2026-11-18",
+        "modifications": "原文件复制，无裁剪、重绘或内容修改",
+        "rights_evidence": "官方 README 直接嵌入 assets/mano2.jpg，并声明 InterHand2.6M is CC-BY-NC 4.0 licensed；同仓库 LICENSE 为 CC Attribution-NonCommercial 4.0，不是代码 MIT/GPL 推断。非商业展示并署名、链接许可。",
+        "sha256": "eb0955ab342d9849251d7978f28b2c5a72052628b5cf9d34ef7529892e7617a1",
+        "noncommercial": true
+      }
+    ]
   },
   {
     "id": "lapa",
@@ -1321,7 +1496,24 @@
       "https://jonathantompson.github.io/NYU_Hand_Pose_Dataset.htm"
     ],
     "notes": "训练只有 1 人，测试含 2 人；关节子集与相机视角应随评测报告。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "images": [
+      {
+        "src": "assets/previews/nyu-hand-sample.png",
+        "source": "https://jonathantompson.github.io/hand_files/sample.png",
+        "source_page": "https://jonathantompson.github.io/NYU_Hand_Pose_Dataset.htm",
+        "alt": "RGB、深度手部与三维点云关节标注组成的 NYU 手姿样例",
+        "caption": "NYU 官方数据样例：颜色图、深度/合成手部与关节点云可视化。",
+        "attribution": "Jonathan Tompson, Murphy Stein, Yann LeCun, Ken Perlin — NYU Hand Pose Dataset (2014)",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "verified_at": "2026-11-18",
+        "modifications": "原文件复制，无裁剪、重绘或内容修改",
+        "rights_evidence": "作者数据页 License 部分明确整套 dataset 为 CC BY 4.0；sample.png 为该页面展示的原始数据样例，非作者肖像、logo 或论文缩略图。页面未单列 sample.png 的独立许可；适用依据为所展示数据的许可。",
+        "sha256": "6b0876cee8aaa2b484c014d862e6322041d849792121ac1b9bb30308a2aeabe1",
+        "noncommercial": false
+      }
+    ]
   },
   {
     "id": "300w",
