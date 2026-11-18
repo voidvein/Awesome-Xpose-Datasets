@@ -89,3 +89,6 @@ Use primary project, institution or paper sources. Preserve version-specific qua
 ## Official dataset previews
 
 Nine original image assets across five datasets are currently verified for display. The remaining records link to their official examples, rather than reproducing images without verified permission. See [image provenance and licensing](IMAGE_GUIDE.md) and [asset manifest](assets/previews/manifest.json). Images retain their own licenses, separate from original dataset terms.
+
+### 预览类型
+已核验原始示例与官网页面截图分别记录。页面截图明确标记来源与截取日期，不将其视为原始数据样例或数据集使用授权；第三方内容权利仍归原作者。无图卡片使用紧凑官方链接，不以通用图或大块占位画布充数。见 [IMAGE_GUIDE.md](IMAGE_GUIDE.md)。
