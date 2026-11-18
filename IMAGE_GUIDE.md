@@ -37,6 +37,6 @@ EMDB’s teaser retains the project website CC BY-SA 4.0 license. This does not 
 
 截图显示「官网页面截图」标签。`rights_note` 明确页面及其中第三方内容仍归原权利人，截图仅用于目录介绍，不代表数据许可或再使用授权。卡片使用顶部对齐 cover，详情完整显示，保留来源链接和拍摄日期。原有 `dataset-sample` 图仍必须具备来源、署名、许可证与核验日期。
 
-无图条目使用紧凑官方链接条，不预留大块空白图片空间。失败图片亦退回紧凑链接。
+无图条目恢复纯文本卡片，不创建图片占位区域或灰色链接条，也不随相邻有图卡片拉伸。加载失败的已有图片才退回紧凑来源链接。
 
 本轮另收录 11 张官网页面截图：BEDLAM、AGORA、RICH、AMASS、3DPW、DexYCB、HOI4D、OakInk、OakInk2、H2O、ARCTIC。合计 20 个预览文件覆盖 16 个数据集。网页截图保留页面上下文，JPEG 编码；不声称拥有原始样本的再分发许可。AGORA 已使用无 cookie 弹窗版本。

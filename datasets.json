@@ -26,7 +26,21 @@
     ],
     "notes": "2024 首次公开，正式论文 CVPR 2025；不要把发布时间与论文年份混用。",
     "paper": "https://arxiv.org/abs/2411.19167",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "HOT3D: Hand and Object Tracking in 3D from Egocentric Multi-View Videos",
+        "url": "https://arxiv.org/abs/2411.19167",
+        "venue": "CVPR",
+        "year": 2025
+      },
+      {
+        "title": "Introducing HOT3D: An Egocentric Dataset for 3D Hand and Object Tracking",
+        "url": "https://arxiv.org/abs/2406.09598",
+        "venue": "arXiv",
+        "year": 2024
+      }
+    ]
   },
   {
     "id": "oakink2",
@@ -69,6 +83,14 @@
         "fit": "cover",
         "sha256": "c0256cc6fb969f73e678f026b18f549b1b223d7d5be4675037ceb3aa0d5a3e65",
         "modifications": "浏览器视口截图，JPEG 编码；未重绘或篡改页面内容。"
+      }
+    ],
+    "papers": [
+      {
+        "title": "OAKINK2: A Dataset of Bimanual Hands-Object Manipulation in Complex Task Completion",
+        "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Zhan_OAKINK2_A_Dataset_of_Bimanual_Hands-Object_Manipulation_in_Complex_Task_CVPR_2024_paper.html",
+        "venue": "CVPR",
+        "year": 2024
       }
     ]
   },
@@ -116,6 +138,14 @@
         "sha256": "71fb4791404874a9418cf98af6a308625374d6df7ac60afd6b11f90bd3780e2a",
         "modifications": "浏览器视口截图，JPEG 编码；未重绘或篡改页面内容。"
       }
+    ],
+    "papers": [
+      {
+        "title": "ARCTIC: A Dataset for Dexterous Bimanual Hand-Object Manipulation",
+        "url": "https://arxiv.org/abs/2204.13662",
+        "venue": "CVPR",
+        "year": 2023
+      }
     ]
   },
   {
@@ -161,6 +191,14 @@
         "fit": "cover",
         "sha256": "62dfbadd63b7e96a9e3b769062b33633c04be6b33a502891d941f86468c661f9",
         "modifications": "浏览器视口截图，JPEG 编码；未重绘或篡改页面内容。"
+      }
+    ],
+    "papers": [
+      {
+        "title": "BEDLAM: A Synthetic Dataset of Bodies Exhibiting Detailed Lifelike Animated Motion",
+        "url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Black_BEDLAM_A_Synthetic_Dataset_of_Bodies_Exhibiting_Detailed_Lifelike_Animated_CVPR_2023_paper.pdf",
+        "venue": "CVPR",
+        "year": 2023
       }
     ]
   },
@@ -222,6 +260,14 @@
         "rights_evidence": "作者项目网站整体的明确 CC BY-SA 4.0 声明；此图为该网站直接嵌入的 teaser，未见该图单独排除声明。不是通过原始数据集许可或代码许可推断。 网站声明未逐张列出许可；该判断依赖网站整体许可覆盖其自有 teaser。第三方权利、人物肖像等不因 CC 自动消除。保留完整原图、来源、作者、许可；修改版本注明修改且保持同一许可。不要将本条说明用作原始数据再分发许可。",
         "sha256": "09da5505008f5596f6abb637e2eb6f12bcf64613d8bdf9db51b7d74fe682d6f1"
       }
+    ],
+    "papers": [
+      {
+        "title": "EMDB: The Electromagnetic Database of Global 3D Human Pose and Shape in the Wild",
+        "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Kaufmann_EMDB_The_Electromagnetic_Database_of_Global_3D_Human_Pose_and_ICCV_2023_paper.html",
+        "venue": "ICCV",
+        "year": 2023
+      }
     ]
   },
   {
@@ -249,7 +295,15 @@
       "https://github.com/wholebody3d/wholebody3d"
     ],
     "notes": "",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "H3WB: Human3.6M 3D WholeBody Dataset and Benchmark",
+        "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Zhu_H3WB_Human3.6M_3D_WholeBody_Dataset_and_Benchmark_ICCV_2023_paper.html",
+        "venue": "ICCV",
+        "year": 2023
+      }
+    ]
   },
   {
     "id": "reinterhand",
@@ -297,6 +351,14 @@
         "sha256": "4c79b9a334286611fdf34d5d645d13c0bd9301b3674600475ada526b9c5d756d",
         "noncommercial": true
       }
+    ],
+    "papers": [
+      {
+        "title": "A Dataset of Relighted 3D Interacting Hands",
+        "url": "https://arxiv.org/abs/2310.17768",
+        "venue": "NeurIPS Datasets and Benchmarks",
+        "year": 2023
+      }
     ]
   },
   {
@@ -325,7 +387,15 @@
       "https://github.com/IDEA-Research/OSX"
     ],
     "notes": "2023 年发布 UBody-V1；区分上半身可见图像与完整可见全身数据。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "One-Stage 3D Whole-Body Mesh Recovery with Component Aware Transformer",
+        "url": "https://arxiv.org/abs/2303.16160",
+        "venue": "CVPR",
+        "year": 2023
+      }
+    ]
   },
   {
     "id": "dad-3dheads",
@@ -353,7 +423,15 @@
       "https://github.com/PinataFarms/DAD-3DHeads"
     ],
     "notes": "仓库代码许可不能自动代表原始图像许可。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "DAD-3DHeads: A Large-Scale Dense, Accurate and Diverse Dataset for 3D Head Alignment From a Single Image",
+        "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Martyniuk_DAD-3DHeads_A_Large-Scale_Dense_Accurate_and_Diverse_Dataset_for_3D_CVPR_2022_paper.html",
+        "venue": "CVPR",
+        "year": 2022
+      }
+    ]
   },
   {
     "id": "hoi4d",
@@ -398,6 +476,14 @@
         "fit": "cover",
         "sha256": "3607782be49c1a57c844c95adeccf070b2a70fd2b9d8719933dd44b635f95038",
         "modifications": "浏览器视口截图，JPEG 编码；未重绘或篡改页面内容。"
+      }
+    ],
+    "papers": [
+      {
+        "title": "HOI4D: A 4D Egocentric Dataset for Category-Level Human-Object Interaction",
+        "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Liu_HOI4D_A_4D_Egocentric_Dataset_for_Category-Level_Human-Object_Interaction_CVPR_2022_paper.html",
+        "venue": "CVPR",
+        "year": 2022
       }
     ]
   },
@@ -444,6 +530,14 @@
         "sha256": "0e9b0e7e3a5c44ee8226718a3d8b139fea8fe617d5344514985163dc1fca9a85",
         "modifications": "浏览器视口截图，JPEG 编码；未重绘或篡改页面内容。"
       }
+    ],
+    "papers": [
+      {
+        "title": "OakInk: A Large-Scale Knowledge Repository for Understanding Hand-Object Interaction",
+        "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Yang_OakInk_A_Large-Scale_Knowledge_Repository_for_Understanding_Hand-Object_Interaction_CVPR_2022_paper.html",
+        "venue": "CVPR",
+        "year": 2022
+      }
     ]
   },
   {
@@ -488,6 +582,14 @@
         "sha256": "86d1d14e5ce1309200c7d82faed47adc30ae40074e80212c68ba0609e7617577",
         "modifications": "浏览器视口截图，JPEG 编码；未重绘或篡改页面内容。"
       }
+    ],
+    "papers": [
+      {
+        "title": "Capturing and Inferring Dense Full-Body Human-Scene Contact",
+        "url": "https://arxiv.org/abs/2206.09553",
+        "venue": "CVPR",
+        "year": 2022
+      }
     ]
   },
   {
@@ -530,6 +632,14 @@
         "fit": "cover",
         "sha256": "bf73fa62f1386345371300caf731cc16725ef9aa323535e90a06ee96b77fea56",
         "modifications": "浏览器视口截图，JPEG 编码；未重绘或篡改页面内容。"
+      }
+    ],
+    "papers": [
+      {
+        "title": "AGORA: Avatars in Geography Optimized for Regression Analysis",
+        "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Patel_AGORA_Avatars_in_Geography_Optimized_for_Regression_Analysis_CVPR_2021_paper.html",
+        "venue": "CVPR",
+        "year": 2021
       }
     ]
   },
@@ -575,6 +685,14 @@
         "fit": "cover",
         "sha256": "d9cba9bd7993a42a0e6667415732a5e8422777bb9e5c0bc65d6fce70c472b292",
         "modifications": "浏览器视口截图，JPEG 编码；未重绘或篡改页面内容。"
+      }
+    ],
+    "papers": [
+      {
+        "title": "DexYCB: A Benchmark for Capturing Hand Grasping of Objects",
+        "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Chao_DexYCB_A_Benchmark_for_Capturing_Hand_Grasping_of_Objects_CVPR_2021_paper.html",
+        "venue": "CVPR",
+        "year": 2021
       }
     ]
   },
@@ -668,6 +786,14 @@
         "sha256": "c44ba0ae95a02c54b563744830a1829b167ffd8749506f83d52243b57142591e",
         "noncommercial": true
       }
+    ],
+    "papers": [
+      {
+        "title": "Fake It Till You Make It: Face Analysis in the Wild Using Synthetic Data Alone",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Wood_Fake_It_Till_You_Make_It_Face_Analysis_in_the_ICCV_2021_paper.html",
+        "venue": "ICCV",
+        "year": 2021
+      }
     ]
   },
   {
@@ -716,6 +842,14 @@
         "sha256": "b3db32a5bb1222332485f1821513200c9157d9927ad1893b11ac2bc2c6ac18ac",
         "modifications": "浏览器视口截图，JPEG 编码；未重绘或篡改页面内容。"
       }
+    ],
+    "papers": [
+      {
+        "title": "H2O: Two Hands Manipulating Objects for First Person Interaction Recognition",
+        "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Kwon_H2O_Two_Hands_Manipulating_Objects_for_First_Person_Interaction_Recognition_ICCV_2021_paper.html",
+        "venue": "ICCV",
+        "year": 2021
+      }
     ]
   },
   {
@@ -746,7 +880,15 @@
       "https://lmb.informatik.uni-freiburg.de/resources/datasets/HanCo.en.html"
     ],
     "notes": "只有图像和标定始终可用；102,480 时间步有预测 MANO，9,055 时间步经人工核验。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Contrastive Representation Learning for Hand Shape Estimation",
+        "url": "https://arxiv.org/pdf/2106.04324.pdf",
+        "venue": "GCPR",
+        "year": 2021
+      }
+    ]
   },
   {
     "id": "coco-wholebody",
@@ -771,7 +913,15 @@
       "https://github.com/jin-s13/COCO-WholeBody"
     ],
     "notes": "",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Whole-Body Human Pose Estimation in the Wild",
+        "url": "https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/768_ECCV_2020_paper.php",
+        "venue": "ECCV",
+        "year": 2020
+      }
+    ]
   },
   {
     "id": "ho3d",
@@ -801,7 +951,15 @@
     ],
     "notes": "v3 于 2021 年改进标注；2024 年公开 v2/v3 评测 GT。不要与 H2O 或 H₂O-3D 混淆。",
     "paper": "https://arxiv.org/abs/1907.01481",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "HOnnotate: A Method for 3D Annotation of Hand and Object Poses",
+        "url": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Hampali_HOnnotate_A_Method_for_3D_Annotation_of_Hand_and_Object_CVPR_2020_paper.pdf",
+        "venue": "CVPR",
+        "year": 2020
+      }
+    ]
   },
   {
     "id": "interhand26m",
@@ -863,6 +1021,14 @@
         "sha256": "eb0955ab342d9849251d7978f28b2c5a72052628b5cf9d34ef7529892e7617a1",
         "noncommercial": true
       }
+    ],
+    "papers": [
+      {
+        "title": "InterHand2.6M: A Dataset and Baseline for 3D Interacting Hand Pose Estimation from a Single RGB Image",
+        "url": "https://arxiv.org/abs/2008.09309",
+        "venue": "ECCV",
+        "year": 2020
+      }
     ]
   },
   {
@@ -889,7 +1055,15 @@
       "https://github.com/jd-opensource/lapa-dataset"
     ],
     "notes": "",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "A New Dataset and Boundary-Attention Semantic Segmentation for Face Parsing",
+        "url": "https://cdn.aaai.org/ojs/6832/6832-13-10061-1-10-20200524.pdf",
+        "venue": "AAAI",
+        "year": 2020
+      }
+    ]
   },
   {
     "id": "3dpeople",
@@ -916,7 +1090,15 @@
       "https://www.albertpumarola.com/research/3DPeople/index.html"
     ],
     "notes": "正式出版摘要写约 2M，作者项目页写 2.5M，规模存在版本口径差异。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "3DPeople: Modeling the Geometry of Dressed Humans",
+        "url": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Pumarola_3DPeople_Modeling_the_Geometry_of_Dressed_Humans_ICCV_2019_paper.pdf",
+        "venue": "ICCV",
+        "year": 2019
+      }
+    ]
   },
   {
     "id": "amass",
@@ -958,6 +1140,14 @@
         "sha256": "9fa8bc8f0519c5a45d8b037860747329f6a2babf5c23660a64001a9cfd4ce2ff",
         "modifications": "浏览器视口截图，JPEG 编码；未重绘或篡改页面内容。"
       }
+    ],
+    "papers": [
+      {
+        "title": "AMASS: Archive of Motion Capture as Surface Shapes",
+        "url": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Mahmood_AMASS_Archive_of_Motion_Capture_As_Surface_Shapes_ICCV_2019_paper.pdf",
+        "venue": "ICCV",
+        "year": 2019
+      }
     ]
   },
   {
@@ -983,7 +1173,15 @@
       "https://github.com/jeffffffli/CrowdPose"
     ],
     "notes": "2019 为 CVPR 正式论文年；预印本 2018。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "CrowdPose: Efficient Crowded Scenes Pose Estimation and a New Benchmark",
+        "url": "https://openaccess.thecvf.com/content_CVPR_2019/html/Li_CrowdPose_Efficient_Crowded_Scenes_Pose_Estimation_and_a_New_Benchmark_CVPR_2019_paper.html",
+        "venue": "CVPR",
+        "year": 2019
+      }
+    ]
   },
   {
     "id": "freihand",
@@ -1011,7 +1209,15 @@
       "https://lmb.informatik.uni-freiburg.de/resources/datasets/FreihandDataset.en.html"
     ],
     "notes": "四种背景不能当作四倍独立姿态；HanCo 是扩展版本，应防止跨集泄漏。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "FreiHAND: A Dataset for Markerless Capture of Hand Pose and Shape From Single RGB Images",
+        "url": "https://openaccess.thecvf.com/content_ICCV_2019/html/Zimmermann_FreiHAND_A_Dataset_for_Markerless_Capture_of_Hand_Pose_and_ICCV_2019_paper.html",
+        "venue": "ICCV",
+        "year": 2019
+      }
+    ]
   },
   {
     "id": "ochuman",
@@ -1037,7 +1243,15 @@
       "https://github.com/liruilong940607/OCHumanApi"
     ],
     "notes": "应区分完整资源与论文比较使用的交集子集。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Pose2Seg: Detection Free Human Instance Segmentation",
+        "url": "https://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_Pose2Seg_Detection_Free_Human_Instance_Segmentation_CVPR_2019_paper.pdf",
+        "venue": "CVPR",
+        "year": 2019
+      }
+    ]
   },
   {
     "id": "3dpw",
@@ -1080,6 +1294,14 @@
         "sha256": "d294ccc19211f6e83ae43b49edc08fc155310f924ad9cdc8914e34bb0964824e",
         "modifications": "浏览器视口截图，JPEG 编码；未重绘或篡改页面内容。"
       }
+    ],
+    "papers": [
+      {
+        "title": "Recovering Accurate 3D Human Pose in The Wild Using IMUs and a Moving Camera",
+        "url": "https://www.ecva.net/papers/eccv_2018/papers_ECCV/html/Timo_von_Marcard_Recovering_Accurate_3D_ECCV_2018_paper.php",
+        "venue": "ECCV",
+        "year": 2018
+      }
     ]
   },
   {
@@ -1110,7 +1332,15 @@
       "https://github.com/guiggh/hand_pose_action"
     ],
     "notes": "物体姿态只覆盖部分序列；注意 cross-subject / cross-object 协议。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "First-Person Hand Action Benchmark With RGB-D Videos and 3D Hand Pose Annotations",
+        "url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Garcia-Hernando_First-Person_Hand_Action_CVPR_2018_paper.html",
+        "venue": "CVPR",
+        "year": 2018
+      }
+    ]
   },
   {
     "id": "wflw",
@@ -1135,7 +1365,15 @@
       "https://github.com/wywu/LAB"
     ],
     "notes": "作者原 WFLW 独立网页本轮返回 404，使用仍可访问的作者仓库入口。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Look at Boundary: A Boundary-Aware Face Alignment Algorithm",
+        "url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Wu_Look_at_Boundary_CVPR_2018_paper.html",
+        "venue": "CVPR",
+        "year": 2018
+      }
+    ]
   },
   {
     "id": "bighand22m",
@@ -1160,7 +1398,15 @@
       "https://kcvl-kaist.github.io/bighand2.2M/"
     ],
     "notes": "当前主页含 HANDS 2019 评测说明，不可把挑战版划分与原始全集混为一谈。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "BigHand2.2M Benchmark: Hand Pose Dataset and State of the Art Analysis",
+        "url": "https://arxiv.org/abs/1704.02612",
+        "venue": "CVPR",
+        "year": 2017
+      }
+    ]
   },
   {
     "id": "ls3d-w",
@@ -1187,7 +1433,15 @@
       "https://www.adrianbulat.com/face-alignment"
     ],
     "notes": "自动转换标注，不能视为全部经三维传感器测量。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "How Far Are We From Solving the 2D & 3D Face Alignment Problem? (And a Dataset of 230,000 3D Facial Landmarks)",
+        "url": "https://openaccess.thecvf.com/content_iccv_2017/html/Bulat_How_Far_Are_ICCV_2017_paper.html",
+        "venue": "ICCV",
+        "year": 2017
+      }
+    ]
   },
   {
     "id": "mpi-inf-3dhp",
@@ -1215,7 +1469,15 @@
       "https://vcai.mpi-inf.mpg.de/3dhp-dataset/"
     ],
     "notes": "官方记录 TS3/TS4/TS6 标注修订，使用时应记录版本。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Monocular 3D Human Pose Estimation In The Wild Using Improved CNN Supervision",
+        "url": "https://arxiv.org/abs/1611.09813",
+        "venue": "3DV",
+        "year": 2017
+      }
+    ]
   },
   {
     "id": "menpo2d",
@@ -1241,7 +1503,15 @@
       "https://github.com/jiankangdeng/MenpoBenchmark"
     ],
     "notes": "此条仅统计作者仓库中的 Menpo2D 图像划分，不合并 300W、COFW 或 Menpo3D。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "The Menpo Facial Landmark Localisation Challenge: A Step Towards the Solution",
+        "url": "https://openaccess.thecvf.com/content_cvpr_2017_workshops/w33/papers/Zafeiriou_The_Menpo_Facial_CVPR_2017_paper.pdf",
+        "venue": "CVPR Workshops",
+        "year": 2017
+      }
+    ]
   },
   {
     "id": "pandora",
@@ -1269,7 +1539,15 @@
       "https://aimagelab-legacy.ing.unimore.it/imagelab/page.asp?IdPage=14"
     ],
     "notes": "图像数、成对模态数和序列数应分开统计。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "POSEidon: Face-From-Depth for Driver Pose Estimation",
+        "url": "https://openaccess.thecvf.com/content_cvpr_2017/html/Borghi_POSEidon_Face-From-Depth_for_CVPR_2017_paper.html",
+        "venue": "CVPR",
+        "year": 2017
+      }
+    ]
   },
   {
     "id": "rhd",
@@ -1300,7 +1578,15 @@
       "https://lmb.informatik.uni-freiburg.de/resources/datasets/RenderedHandposeDataset.en.html"
     ],
     "notes": "合成域与真实图像有差异；不要将样本数视为独立真实场景数。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Learning to Estimate 3D Hand Pose From Single RGB Images",
+        "url": "https://openaccess.thecvf.com/content_iccv_2017/html/Zimmermann_Learning_to_Estimate_ICCV_2017_paper.html",
+        "venue": "ICCV",
+        "year": 2017
+      }
+    ]
   },
   {
     "id": "surreal",
@@ -1331,7 +1617,15 @@
       "https://github.com/gulvarol/surreal"
     ],
     "notes": "",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Learning from Synthetic Humans",
+        "url": "https://openaccess.thecvf.com/content_cvpr_2017/html/Varol_Learning_From_Synthetic_CVPR_2017_paper.html",
+        "venue": "CVPR",
+        "year": 2017
+      }
+    ]
   },
   {
     "id": "up3d",
@@ -1359,7 +1653,15 @@
       "https://files.is.tuebingen.mpg.de/classner/up/"
     ],
     "notes": "三维标签来自模型拟合与人工筛选，不等同于直接动捕真值。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Unite the People: Closing the Loop Between 3D and 2D Human Representations",
+        "url": "https://openaccess.thecvf.com/content_cvpr_2017/papers/Lassner_Unite_the_People_CVPR_2017_paper.pdf",
+        "venue": "CVPR",
+        "year": 2017
+      }
+    ]
   },
   {
     "id": "300w-lp",
@@ -1390,7 +1692,15 @@
     ],
     "notes": "合成扩增与原 300-W 图像有血缘关系，拆分时避免泄漏。",
     "verified_at": "2026-11-18",
-    "paper": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf"
+    "paper": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf",
+    "papers": [
+      {
+        "title": "Face Alignment Across Large Poses: A 3D Solution",
+        "url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Zhu_Face_Alignment_Across_CVPR_2016_paper.html",
+        "venue": "CVPR",
+        "year": 2016
+      }
+    ]
   },
   {
     "id": "aflw2000-3d",
@@ -1419,7 +1729,15 @@
     ],
     "notes": "标注来自三维拟合，不是三维扫描实测。",
     "verified_at": "2026-11-18",
-    "paper": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf"
+    "paper": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf",
+    "papers": [
+      {
+        "title": "Face Alignment Across Large Poses: A 3D Solution",
+        "url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Zhu_Face_Alignment_Across_CVPR_2016_paper.html",
+        "venue": "CVPR",
+        "year": 2016
+      }
+    ]
   },
   {
     "id": "panoptic",
@@ -1449,7 +1767,15 @@
       "https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox"
     ],
     "notes": "2016 为官方公开发布年；系统论文始于 2015。各序列可用标注不同。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Panoptic Studio: A Massively Multiview System for Social Motion Capture",
+        "url": "https://openaccess.thecvf.com/content_iccv_2015/papers/Joo_Panoptic_Studio_A_ICCV_2015_paper.pdf",
+        "venue": "ICCV",
+        "year": 2015
+      }
+    ]
   },
   {
     "id": "mafl",
@@ -1475,7 +1801,15 @@
       "https://mmlab.ie.cuhk.edu.hk/projects/TCDCN.html"
     ],
     "notes": "年份采用作者主页公开数据说明的 2016 年；与 MTFL 是不同条目。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Learning Deep Representation for Face Alignment with Auxiliary Attributes",
+        "url": "https://arxiv.org/abs/1408.3967",
+        "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        "year": 2016
+      }
+    ]
   },
   {
     "id": "300vw",
@@ -1500,7 +1834,15 @@
       "https://ibug.doc.ic.ac.uk/resources/300-VW/"
     ],
     "notes": "",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "The First Facial Landmark Tracking in-the-Wild Challenge: Benchmark and Results",
+        "url": "https://openaccess.thecvf.com/content_iccv_2015_workshops/w25/papers/Shen_The_First_Facial_ICCV_2015_paper.pdf",
+        "venue": "ICCV Workshops",
+        "year": 2015
+      }
+    ]
   },
   {
     "id": "coco-keypoints",
@@ -1526,7 +1868,15 @@
       "https://cocodataset.org/"
     ],
     "notes": "2014 为 COCO 数据集论文年份；具体实验应注明 2017 等划分版本。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Microsoft COCO: Common Objects in Context",
+        "url": "https://doi.org/10.1007/978-3-319-10602-1_48",
+        "venue": "ECCV",
+        "year": 2014
+      }
+    ]
   },
   {
     "id": "human36m",
@@ -1554,7 +1904,15 @@
       "https://vision.imar.ro/human3.6m/description.php"
     ],
     "notes": "2014 为 TPAMI 卷期年；不把不同协议的 MPJPE 直接混比。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Human3.6M: Large Scale Datasets and Predictive Methods for 3D Human Sensing in Natural Environments",
+        "url": "https://vision.imar.ro/human3.6m/human36m_techrep.pdf",
+        "venue": "TPAMI",
+        "year": 2014
+      }
+    ]
   },
   {
     "id": "icvl-hand",
@@ -1579,7 +1937,15 @@
       "https://labicvl.github.io/hand.html"
     ],
     "notes": "x/y 为像素、z 为毫米；关节点定义为关节中心。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Latent Regression Forest: Structured Estimation of 3D Articulated Hand Posture",
+        "url": "https://www.cv-foundation.org/openaccess/content_cvpr_2014/html/Tang_Latent_Regression_Forest_2014_CVPR_paper.html",
+        "venue": "CVPR",
+        "year": 2014
+      }
+    ]
   },
   {
     "id": "mpii",
@@ -1606,7 +1972,15 @@
       "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/software-and-datasets/mpii-human-pose-dataset"
     ],
     "notes": "",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "2D Human Pose Estimation: New Benchmark and State of the Art Analysis",
+        "url": "https://openaccess.thecvf.com/content_cvpr_2014/html/Andriluka_2D_Human_Pose_2014_CVPR_paper.html",
+        "venue": "CVPR",
+        "year": 2014
+      }
+    ]
   },
   {
     "id": "mtfl",
@@ -1633,7 +2007,15 @@
       "https://mmlab.ie.cuhk.edu.hk/projects/TCDCN.html"
     ],
     "notes": "头姿属性不应当作精确连续旋转真值。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Facial Landmark Detection by Deep Multi-task Learning",
+        "url": "https://personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2014_deepfacealign.pdf",
+        "venue": "ECCV",
+        "year": 2014
+      }
+    ]
   },
   {
     "id": "nyu-hand",
@@ -1678,6 +2060,14 @@
         "sha256": "6b0876cee8aaa2b484c014d862e6322041d849792121ac1b9bb30308a2aeabe1",
         "noncommercial": false
       }
+    ],
+    "papers": [
+      {
+        "title": "Real-Time Continuous Pose Recovery of Human Hands Using Convolutional Networks",
+        "url": "https://jonathantompson.github.io/others/TOG_2014_paper.pdf",
+        "venue": "ACM Transactions on Graphics",
+        "year": 2014
+      }
     ]
   },
   {
@@ -1703,7 +2093,15 @@
       "https://ibug.doc.ic.ac.uk/resources/300-W/"
     ],
     "notes": "不要混淆 600 张挑战测试集与常用 689 张组合测试协议。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "300 Faces in-the-Wild Challenge: The First Facial Landmark Localization Challenge",
+        "url": "https://ibug.doc.ic.ac.uk/media/uploads/documents/sagonas_iccv_2013_300_w.pdf",
+        "venue": "ICCV Workshops",
+        "year": 2013
+      }
+    ]
   },
   {
     "id": "aflw",
@@ -1733,7 +2131,15 @@
     ],
     "notes": "不可见点不等于有精确三维真值；脸数与图像数不同。",
     "verified_at": "2026-11-18",
-    "paper": "https://ieeexplore.ieee.org/abstract/document/6130513/"
+    "paper": "https://ieeexplore.ieee.org/abstract/document/6130513/",
+    "papers": [
+      {
+        "title": "Annotated Facial Landmarks in the Wild: A Large-scale, Real-world Database for Facial Landmark Localization",
+        "url": "https://www.tugraz.at/fileadmin/user_upload/Institute/ICG/Documents/lrs/pubs/koestinger_befit_11.pdf",
+        "venue": "ICCV Workshops (BeFIT)",
+        "year": 2011
+      }
+    ]
   },
   {
     "id": "multi-pie",
@@ -1757,7 +2163,15 @@
       "https://www.cs.cmu.edu/afs/cs/project/PIE/MultiPie/Multi-Pie/Home.html"
     ],
     "notes": "年份为官方开始接受订购的 2009 年。提供受控相机视点条件，不等于每帧自由头姿或逐点三维真值；本轮未核实其 2D/3D 姿态标注，故不纳入维度筛选。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Multi-PIE",
+        "url": "https://www.microsoft.com/en-us/research/publication/multi-pie/",
+        "venue": "IEEE International Conference on Automatic Face and Gesture Recognition",
+        "year": 2008
+      }
+    ]
   },
   {
     "id": "pointing04",
@@ -1783,6 +2197,14 @@
       "https://crowley-coutaz.fr/Head%20Pose%20Image%20Database.html"
     ],
     "notes": "角度标签不等同连续 6DoF 标注。",
-    "verified_at": "2026-11-18"
+    "verified_at": "2026-11-18",
+    "papers": [
+      {
+        "title": "Estimating Face Orientation from Robust Detection of Salient Facial Structures",
+        "url": "https://homepages.inf.ed.ac.uk/rbf/CAVIAR/PAPERS/Pointing04-Gourier.pdf",
+        "venue": "Pointing 2004: International Workshop on Visual Observation of Deictic Gestures (ICPR)",
+        "year": 2004
+      }
+    ]
   }
 ]
