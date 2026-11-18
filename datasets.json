@@ -1,5 +1,47 @@
 [
   {
+    "id": "anyhand",
+    "name": "AnyHand",
+    "year": 2026,
+    "category": "Hand",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "大规模合成 RGB-D 手部数据，覆盖单手与手物交互，可用于手部网格重建和合成到真实泛化研究。",
+    "modalities": [
+      "RGB",
+      "Depth",
+      "Synthetic"
+    ],
+    "annotations": [
+      "二维关节",
+      "相机坐标系三维关节（米）",
+      "手部姿态与形状",
+      "相机参数",
+      "深度及可选前景掩码"
+    ],
+    "scale": "官方 Hugging Face v1 数据卡与 arXiv v3：约 2.5M 单手、4.1M 交互图像。官网 Dataset 节仍写 2.1M/4.2M，与其摘要不一致；精确样本数应按固定版本 manifest 核验。",
+    "access": "官方 Hugging Face 已公开 train/test TAR 分片及校验清单；本次核验入口与文档，未下载整套数据。",
+    "license": "数据：CC BY-NC-ND 4.0；toolkit：MIT。第三方模型、纹理和物体素材可能另有限制，不可混同。",
+    "url": "https://chen-si-cs.github.io/projects/AnyHand/",
+    "sources": [
+      "https://chen-si-cs.github.io/projects/AnyHand/",
+      "https://huggingface.co/datasets/chen-si-02/AnyHand-Dataset",
+      "https://arxiv.org/abs/2603.25726v3"
+    ],
+    "notes": "标注含相机坐标与尺度，便于检验 RGB-D 融合及遮挡重建。前景深度来自渲染，背景深度为 MoGe-2 估计与合成，不是全图精确真值；应单独报告真实数据测试，注意合成域差距及边界伪影。数据卡未保证训练测试间手形、纹理或物体身份互斥；固定下载 revision 并保留 manifest 有助复现。",
+    "verified_at": "2026-11-19",
+    "papers": [
+      {
+        "title": "AnyHand: A Large-Scale Synthetic Dataset for RGB(-D) Hand Pose Estimation",
+        "url": "https://arxiv.org/abs/2603.25726",
+        "venue": "NeurIPS Evaluations and Datasets Track（作者及官方数据卡标注）",
+        "year": 2026
+      }
+    ]
+  },
+  {
     "id": "reach",
     "name": "REACH",
     "year": 2026,
