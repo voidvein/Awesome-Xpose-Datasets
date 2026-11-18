@@ -41,3 +41,8 @@ assert.equal(filterDatasets([normalize({id:'test',name:'Test',year:2020,papers:[
 console.log('PASS: associated paper schema, URL/title gate, deduplication, unknown venue/year and linked-paper search.');
 for(const p of raw){assert.ok(datasetPapers(p).length>0,p.id+' has a verified associated paper');assert.equal(datasetPapers(p).length,p.papers.length,p.id+' paper list passes schema without dropping entries');for(const paper of p.papers){assert.ok(paper.venue&&Number.isInteger(paper.year),p.id+' source venue/year provided');}}
 console.log('PASS: all catalog entries have valid paper metadata; publication years remain independent of dataset years.');
+const css=fs.readFileSync(path.join(__dirname,'../style.css'),'utf8');
+assert.ok(css.includes('.dataset-preview-link,.dataset-preview-fallback{height:auto;min-height:0;aspect-ratio:16/10'));
+assert.ok(css.includes('@media(max-width:550px){.dataset-preview-link,.dataset-preview-fallback{height:auto;min-height:0;aspect-ratio:16/10}'));
+assert.ok(css.includes('.preview-caption{height:43px;min-height:43px;max-height:43px'));
+console.log('PASS: common real/placeholder preview geometry, equal caption heights and mobile ratio override.');
