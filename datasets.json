@@ -1,0 +1,1431 @@
+[
+  {
+    "id": "hot3d",
+    "name": "HOT3D",
+    "year": 2024,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "头戴多视角相机捕获手物交互，面向第一人称三维跟踪。",
+    "modalities": [
+      "RGB",
+      "Monochrome",
+      "Multiview",
+      "Video"
+    ],
+    "annotations": [
+      "手物三维姿态和形状"
+    ],
+    "scale": "833 分钟；19 人；33 刚性物体",
+    "access": "官方项目页面提供下载与工具",
+    "license": "不同数据组件许可需单独核对；本轮未完整核实",
+    "url": "https://facebookresearch.github.io/hot3d/",
+    "sources": [
+      "https://facebookresearch.github.io/hot3d/"
+    ],
+    "notes": "2024 首次公开，正式论文 CVPR 2025；不要把发布时间与论文年份混用。",
+    "paper": "https://arxiv.org/abs/2411.19167",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "oakink2",
+    "name": "OakInk2",
+    "year": 2024,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "复杂任务中的双手物体操作，加入文本目标、动作原语和依赖图。",
+    "modalities": [
+      "RGB",
+      "Video",
+      "3D mesh"
+    ],
+    "annotations": [
+      "人体/双手/物体三维标注",
+      "任务文本",
+      "原语依赖图"
+    ],
+    "scale": "规模本轮未核实",
+    "access": "官方 Hugging Face 与工具包；主页标注为 preview",
+    "license": "数据许可未核实；以官方数据条款为准，不沿用代码或网页模板许可证",
+    "url": "https://oakink.net/v2/",
+    "sources": [
+      "https://oakink.net/v2/"
+    ],
+    "notes": "官方注明预览版标注可能继续改变，实验须固定版本。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "arctic",
+    "name": "ARCTIC",
+    "year": 2023,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "双手灵巧操作可动关节物体，强调同步运动与动态接触。",
+    "modalities": [
+      "RGB",
+      "Multiview",
+      "Video",
+      "3D mesh"
+    ],
+    "annotations": [
+      "手物三维网格",
+      "动态接触",
+      "MANO/SMPL-X"
+    ],
+    "scale": "2.1M 视频帧",
+    "access": "注册并接受官方数据许可",
+    "license": "定制非商业研究许可；限制再分发",
+    "url": "https://arctic.is.tue.mpg.de/",
+    "sources": [
+      "https://arctic.is.tue.mpg.de/",
+      "https://arctic.is.tue.mpg.de/license.html"
+    ],
+    "notes": "不能把渲染深度当作实测深度；使用前检查模型与数据各自条款。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "bedlam",
+    "name": "BEDLAM",
+    "year": 2023,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "带真实感服装、灯光和相机运动的合成人体视频，包含 SMPL-X 真值。",
+    "modalities": [
+      "合成 RGB",
+      "深度",
+      "分割"
+    ],
+    "annotations": [
+      "SMPL-X",
+      "深度图",
+      "分割掩码"
+    ],
+    "scale": "官方当前页面：10,450 序列，30fps，1280×720；另有原论文 6fps 子采样版",
+    "access": "注册并接受许可后下载",
+    "license": "非商业科研许可；不允许再分发",
+    "url": "https://bedlam.is.tue.mpg.de/",
+    "sources": [
+      "https://bedlam.is.tue.mpg.de/",
+      "https://bedlam.is.tue.mpg.de/license.html"
+    ],
+    "notes": "与 BEDLAM2.0 分开记录，不混用规模。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "h3wb",
+    "name": "H3WB",
+    "year": 2023,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "扩展 Human3.6M 为三维全身关键点，支持 RGB 到三维与二维 lifting。",
+    "modalities": [
+      "RGB",
+      "多视角"
+    ],
+    "annotations": [
+      "133 个全身二维/三维关键点"
+    ],
+    "scale": "100K 图像",
+    "access": "官方仓库下载标注；图像需另从 Human3.6M 获取",
+    "license": "代码 MIT 不等于 Human3.6M 图像许可；数据用途另核对",
+    "url": "https://github.com/wholebody3d/wholebody3d",
+    "sources": [
+      "https://github.com/wholebody3d/wholebody3d"
+    ],
+    "notes": "",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "reinterhand",
+    "name": "Re:InterHand",
+    "year": 2023,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "以重光照生成多样外观和视角的双手交互数据，提供时序和单帧配置。",
+    "modalities": [
+      "RGB",
+      "Synthetic relighting",
+      "Multiview"
+    ],
+    "annotations": [
+      "三维关键点",
+      "网格",
+      "MANO",
+      "遮罩",
+      "相机参数"
+    ],
+    "scale": "1,526,795 图像（不同视角分别计数）",
+    "access": "官方下载脚本与校验和",
+    "license": "CC BY-NC 4.0",
+    "url": "https://mks0601.github.io/ReInterHand/",
+    "sources": [
+      "https://mks0601.github.io/ReInterHand/"
+    ],
+    "notes": "图像由重光照渲染，不应标为完全原始实拍；不同 envmap 与视角配置需分开报告。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "ubody",
+    "name": "UBody",
+    "year": 2023,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "面向自然场景上半身表达的全身模型/关键点数据，支持手脸与身体联合研究。",
+    "modalities": [
+      "RGB",
+      "视频"
+    ],
+    "annotations": [
+      "二维全身关键点",
+      "SMPL-X 参数"
+    ],
+    "scale": "本轮未核实统一规模",
+    "access": "OSX 官方仓库 Data 链接",
+    "license": "数据许可待核实；不可直接沿用代码 MIT",
+    "url": "https://github.com/IDEA-Research/OSX",
+    "sources": [
+      "https://github.com/IDEA-Research/OSX"
+    ],
+    "notes": "2023 年发布 UBody-V1；区分上半身可见图像与完整可见全身数据。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "dad-3dheads",
+    "name": "DAD-3DHeads",
+    "year": 2022,
+    "category": "Head",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "野外密集三维头部对齐数据，含头部顶点以及模型视图、投影矩阵。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "三维头网格顶点",
+      "模型视图/投影矩阵",
+      "脸框与属性"
+    ],
+    "scale": "总量本轮未核实",
+    "access": "作者仓库链接至作者 Hugging Face 数据发布",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://github.com/PinataFarms/DAD-3DHeads",
+    "sources": [
+      "https://github.com/PinataFarms/DAD-3DHeads"
+    ],
+    "notes": "仓库代码许可不能自动代表原始图像许可。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "hoi4d",
+    "name": "HOI4D",
+    "year": 2022,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "真实室内第一人称 RGB-D 交互，联合手姿、物体姿态和场景理解。",
+    "modalities": [
+      "RGB",
+      "Depth",
+      "Video",
+      "Point cloud"
+    ],
+    "annotations": [
+      "三维手姿",
+      "物体姿态",
+      "动作/运动/全景分割",
+      "场景点云"
+    ],
+    "scale": "2.4M 帧；4,000+ 序列；9 人；800 物体实例；610 房间",
+    "access": "官网提供图像、深度及标注入口",
+    "license": "数据许可未核实；以官方数据条款为准，不沿用代码或网页模板许可证",
+    "url": "https://hoi4d.github.io/",
+    "sources": [
+      "https://hoi4d.github.io/"
+    ],
+    "notes": "官方主页当前写 9 人，早期摘要可能写 4 人；记录采用当前主页口径。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "oakink",
+    "name": "OakInk",
+    "year": 2022,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "包含图像手物重建和几何抓握资源，需区分 Image 与 Shape 子集。",
+    "modalities": [
+      "RGB",
+      "Multiview",
+      "3D mesh"
+    ],
+    "annotations": [
+      "手物姿态与形状",
+      "抓握意图",
+      "物体属性"
+    ],
+    "scale": "OakInk-Image 未过滤 314,404 帧；Shape 62,046 抓握姿态（工具包文档口径）",
+    "access": "官方 Hugging Face；标注需按主页填写表单",
+    "license": "数据许可未核实；以官方数据条款为准，不沿用代码或网页模板许可证",
+    "url": "https://oakink.net/",
+    "sources": [
+      "https://oakink.net/",
+      "https://github.com/oakink/OakInk/blob/main/docs/datasets.md"
+    ],
+    "notes": "项目摘要旧口径为 230K 图像/50K 姿态；本条采用工具包完整版本，切分会过滤部分视野外关键点。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "rich",
+    "name": "RICH",
+    "year": 2022,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "室内外人体与场景交互，强调人体表面与场景接触。",
+    "modalities": [
+      "4K RGB",
+      "多视角",
+      "三维扫描"
+    ],
+    "annotations": [
+      "三维人体",
+      "场景扫描",
+      "人体顶点级接触"
+    ],
+    "scale": "本轮未核实统一数量",
+    "access": "官网注册/下载入口",
+    "license": "专用许可；官网另设商业许可联系渠道",
+    "url": "https://rich.is.tue.mpg.de/",
+    "sources": [
+      "https://rich.is.tue.mpg.de/"
+    ],
+    "notes": "",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "agora",
+    "name": "AGORA",
+    "year": 2021,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "高真实感多人合成场景，使用成人及儿童扫描拟合 SMPL-X。",
+    "modalities": [
+      "合成 RGB",
+      "三维扫描"
+    ],
+    "annotations": [
+      "SMPL-X 拟合",
+      "人体姿态与形状"
+    ],
+    "scale": "约 14K 训练图、3K 测试图、173K 人物裁剪",
+    "access": "官网注册并接受 License Agreement",
+    "license": "专用许可；商用资格需核实",
+    "url": "https://agora.is.tue.mpg.de/",
+    "sources": [
+      "https://agora.is.tue.mpg.de/"
+    ],
+    "notes": "扫描拟合为参考/伪真值；避免与同名 AI 政策文本 AGORA 混淆。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "dexycb",
+    "name": "DexYCB",
+    "year": 2021,
+    "category": "Hand",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "真实抓握 YCB 物体的 RGB-D 基准，覆盖手关键点、物体姿态和交接任务。",
+    "modalities": [
+      "RGB",
+      "Depth",
+      "Multiview"
+    ],
+    "annotations": [
+      "2D 关键点",
+      "3D 手姿",
+      "6D 物体姿态"
+    ],
+    "scale": "官方完整压缩包 119 GB；帧数本轮未核实",
+    "access": "官网整包或分主体下载",
+    "license": "CC BY-NC 4.0",
+    "url": "https://dex-ycb.github.io/",
+    "sources": [
+      "https://dex-ycb.github.io/"
+    ],
+    "notes": "区分各评测划分和 MANO 外部模型许可。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "face-synthetics",
+    "name": "FaceSynthetics",
+    "year": 2021,
+    "category": "Head",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "可控制生成的人脸图像，提供关键点和像素分割，面向合成到真实迁移。",
+    "modalities": [
+      "synthetic RGB"
+    ],
+    "annotations": [
+      "70 点二维投影关键点",
+      "语义分割"
+    ],
+    "scale": "100,000 张 512×512 图；完整包约 32 GB",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "非商业研究；详见官方 LICENSE.txt",
+    "url": "https://github.com/microsoft/FaceSynthetics",
+    "sources": [
+      "https://github.com/microsoft/FaceSynthetics"
+    ],
+    "notes": "公开标签是三维点的二维投影，非传统轮廓滑动标注；不能据此宣称公开完整三维网格。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "h2o",
+    "name": "H2O",
+    "year": 2021,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "双手操作物体的多视角 RGB-D 数据，包含第一人称观测。",
+    "modalities": [
+      "RGB",
+      "Depth",
+      "Multiview",
+      "Video"
+    ],
+    "annotations": [
+      "左右手三维姿态",
+      "物体 6D 姿态",
+      "相机姿态",
+      "交互类别",
+      "物体网格"
+    ],
+    "scale": "4 名参与者；帧数本轮未核实",
+    "access": "注册并同意条款，邮件领取临时凭据",
+    "license": "仅学术、非商业用途，不得转交第三方",
+    "url": "https://h2odataset.ethz.ch/",
+    "sources": [
+      "https://h2odataset.ethz.ch/",
+      "https://github.com/taeinkwon/h2odataset"
+    ],
+    "notes": "H2O 与 H₂O-3D 是两个数据集。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "hanco",
+    "name": "HanCo",
+    "year": 2021,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "FreiHAND 的同步多视角时序扩展，用于手形估计和自监督表征。",
+    "modalities": [
+      "RGB",
+      "Multiview",
+      "Video"
+    ],
+    "annotations": [
+      "21 三维关键点",
+      "MANO",
+      "分割",
+      "相机标定"
+    ],
+    "scale": "860,304 RGB 图；107,538 时间步；8 相机",
+    "access": "官网按模态下载并提供小样本包",
+    "license": "仅研究用途，禁止商业使用，需引用",
+    "url": "https://lmb.informatik.uni-freiburg.de/resources/datasets/HanCo.en.html",
+    "sources": [
+      "https://lmb.informatik.uni-freiburg.de/resources/datasets/HanCo.en.html"
+    ],
+    "notes": "只有图像和标定始终可用；102,480 时间步有预测 MANO，9,055 时间步经人工核验。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "coco-wholebody",
+    "name": "COCO-WholeBody",
+    "year": 2020,
+    "category": "Human",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "在 COCO 人物上补充脸、手和脚，统一全身关键点。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "133 点：身体 17、脚 6、脸 68、双手 42"
+    ],
+    "scale": "133 点/人；具体图像数按划分核对",
+    "access": "官方仓库提供标注；图像从 COCO 获取",
+    "license": "官方说明仅研究和非商业用途；原图同时遵守 COCO 原始权利",
+    "url": "https://github.com/jin-s13/COCO-WholeBody",
+    "sources": [
+      "https://github.com/jin-s13/COCO-WholeBody"
+    ],
+    "notes": "",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "ho3d",
+    "name": "HO-3D",
+    "year": 2020,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "严重手物互遮挡下的手部与物体姿态基准，包含 v2/v3 不同标注版本。",
+    "modalities": [
+      "RGB",
+      "Depth",
+      "Video"
+    ],
+    "annotations": [
+      "三维手姿",
+      "物体姿态",
+      "手形参数"
+    ],
+    "scale": "不同版本规模待核实",
+    "access": "官方仓库提供 v2/v3 下载和评测 GT",
+    "license": "数据许可未核实；以官方数据条款为准，不沿用代码或网页模板许可证",
+    "url": "https://github.com/shreyashampali/ho3d",
+    "sources": [
+      "https://github.com/shreyashampali/ho3d"
+    ],
+    "notes": "v3 于 2021 年改进标注；2024 年公开 v2/v3 评测 GT。不要与 H2O 或 H₂O-3D 混淆。",
+    "paper": "https://arxiv.org/abs/1907.01481",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "interhand26m",
+    "name": "InterHand2.6M",
+    "year": 2020,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "实拍单手与双手交互数据，提供相机标定、有效性标记与拟合 MANO。",
+    "modalities": [
+      "RGB",
+      "Multiview",
+      "Video"
+    ],
+    "annotations": [
+      "三维关节",
+      "相机参数",
+      "MANO 拟合",
+      "左右手类别"
+    ],
+    "scale": "5 fps：2,590,347 图像；30 fps：12,469,899 图像",
+    "access": "官方下载及脚本",
+    "license": "数据许可未核实；以官方数据条款为准，不沿用代码或网页模板许可证",
+    "url": "https://mks0601.github.io/InterHand2.6M/",
+    "sources": [
+      "https://mks0601.github.io/InterHand2.6M/"
+    ],
+    "notes": "必须注明 5 fps/30 fps 及 H/M/H+M 标注组合；MANO 拟合不等同于直接扫描真值。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "lapa",
+    "name": "LaPa",
+    "year": 2020,
+    "category": "Head",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "将面部关键点与像素级语义分割结合，覆盖表情、姿态及遮挡变化。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "106 点关键点",
+      "11 类分割图"
+    ],
+    "scale": "22,000+ 图",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "非商业用途；须遵守仓库数据许可",
+    "url": "https://github.com/jd-opensource/lapa-dataset",
+    "sources": [
+      "https://github.com/jd-opensource/lapa-dataset"
+    ],
+    "notes": "",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "3dpeople",
+    "name": "3DPeople",
+    "year": 2019,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "穿着服装的合成人体，多人物身份与动作变化，用于人体几何学习。",
+    "modalities": [
+      "合成 RGB"
+    ],
+    "annotations": [
+      "人体几何",
+      "姿态"
+    ],
+    "scale": "80 人物、70 活动；作者项目页写 2.5M 图像",
+    "access": "作者项目页及官方仓库",
+    "license": "本轮未核实数据许可",
+    "url": "https://www.albertpumarola.com/research/3DPeople/index.html",
+    "sources": [
+      "https://www.albertpumarola.com/research/3DPeople/index.html"
+    ],
+    "notes": "正式出版摘要写约 2M，作者项目页写 2.5M，规模存在版本口径差异。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "amass",
+    "name": "AMASS",
+    "year": 2019,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "将多个光学动捕库统一为人体表面模型参数，适合运动先验与合成数据。",
+    "modalities": [
+      "动作捕捉",
+      "模型参数"
+    ],
+    "annotations": [
+      "人体模型参数序列"
+    ],
+    "scale": "原始论文口径：40+ 小时、300+ 人、11,000+ 动作",
+    "access": "官网注册",
+    "license": "非商业科研许可；禁止再分发",
+    "url": "https://amass.is.tue.mpg.de/",
+    "sources": [
+      "https://amass.is.tue.mpg.de/",
+      "https://amass.is.tue.mpg.de/license.html"
+    ],
+    "notes": "持续更新数据集，不能把原始论文规模当作当前精确总量；不是天然配对 RGB 数据集。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "crowdpose",
+    "name": "CrowdPose",
+    "year": 2019,
+    "category": "Human",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "强调拥挤场景中的多人姿态估计与人物间遮挡。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "人体二维关键点"
+    ],
+    "scale": "本轮未核实主源规模",
+    "access": "官方仓库数据入口",
+    "license": "待核实；公开可下载不等于可商用",
+    "url": "https://github.com/jeffffffli/CrowdPose",
+    "sources": [
+      "https://github.com/jeffffffli/CrowdPose"
+    ],
+    "notes": "2019 为 CVPR 正式论文年；预印本 2018。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "freihand",
+    "name": "FreiHAND",
+    "year": 2019,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "面向单张彩色图的三维手姿与形状重建，提供背景替换训练图。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "21 三维关键点",
+      "三维形状",
+      "分割",
+      "相机内参"
+    ],
+    "scale": "130,240 训练图（32,560 个样本 × 4 背景处理）；3,960 评测样本",
+    "access": "官网 v2 下载；评测标注现已公开",
+    "license": "仅研究用途，禁止商业使用，需引用",
+    "url": "https://lmb.informatik.uni-freiburg.de/resources/datasets/FreihandDataset.en.html",
+    "sources": [
+      "https://lmb.informatik.uni-freiburg.de/resources/datasets/FreihandDataset.en.html"
+    ],
+    "notes": "四种背景不能当作四倍独立姿态；HanCo 是扩展版本，应防止跨集泄漏。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "ochuman",
+    "name": "OCHuman",
+    "year": 2019,
+    "category": "Human",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "面向严重遮挡的人体关键点和实例分割评估。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "二维关键点",
+      "实例掩码"
+    ],
+    "scale": "同时含关键点与掩码的评测子集：4,731 图、8,110 人",
+    "access": "官方 API 仓库提供数据说明",
+    "license": "待核实；公开可下载不等于可商用",
+    "url": "https://github.com/liruilong940607/OCHumanApi",
+    "sources": [
+      "https://github.com/liruilong940607/OCHumanApi"
+    ],
+    "notes": "应区分完整资源与论文比较使用的交集子集。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "3dpw",
+    "name": "3DPW",
+    "year": 2018,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "野外移动摄像机与惯性传感器结合采集，提供人体姿态和形状。",
+    "modalities": [
+      "RGB",
+      "IMU"
+    ],
+    "annotations": [
+      "三维人体姿态",
+      "人体模型"
+    ],
+    "scale": "60 段视频",
+    "access": "官方页面同意数据许可后获取",
+    "license": "专门数据许可，需逐条确认用途",
+    "url": "https://virtualhumans.mpi-inf.mpg.de/3DPW/",
+    "sources": [
+      "https://virtualhumans.mpi-inf.mpg.de/3DPW/",
+      "https://virtualhumans.mpi-inf.mpg.de/3DPW/license.html"
+    ],
+    "notes": "",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "fpha",
+    "name": "First-Person Hand Action Benchmark (FPHA)",
+    "year": 2018,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "第一人称 RGB-D 动作视频，兼顾被物体遮挡的手姿估计与动作识别。",
+    "modalities": [
+      "RGB",
+      "Depth",
+      "Video"
+    ],
+    "annotations": [
+      "21 手关节",
+      "动作类别",
+      "部分序列物体 6D 姿态"
+    ],
+    "scale": "超过 100K 帧；45 动作类别；26 物体",
+    "access": "官方仓库表单；作者新主页也提供下载入口",
+    "license": "仅非商业学术研究；未经许可不得再分发或修改",
+    "url": "https://kcvl-kaist.github.io/FPHA/",
+    "sources": [
+      "https://kcvl-kaist.github.io/FPHA/",
+      "https://github.com/guiggh/hand_pose_action"
+    ],
+    "notes": "物体姿态只覆盖部分序列；注意 cross-subject / cross-object 协议。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "wflw",
+    "name": "WFLW",
+    "year": 2018,
+    "category": "Head",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "包含姿态、表情、光照、妆容、遮挡和模糊变化的密集人脸关键点基准。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "98 点人工关键点"
+    ],
+    "scale": "10,000 张脸；7,500 训练 / 2,500 测试",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://github.com/wywu/LAB",
+    "sources": [
+      "https://github.com/wywu/LAB"
+    ],
+    "notes": "作者原 WFLW 独立网页本轮返回 404，使用仍可访问的作者仓库入口。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "bighand22m",
+    "name": "BigHand2.2M",
+    "year": 2017,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "以磁传感器和逆运动学标注深度图，覆盖多种手型、视角和关节运动。",
+    "modalities": [
+      "Depth"
+    ],
+    "annotations": [
+      "21 关节"
+    ],
+    "scale": "约 2.2M 深度图（基准名称口径）；挑战版切分需单独核对",
+    "access": "作者主页提供数据下载",
+    "license": "数据许可未核实；以官方数据条款为准，不沿用代码或网页模板许可证",
+    "url": "https://kcvl-kaist.github.io/bighand2.2M/",
+    "sources": [
+      "https://kcvl-kaist.github.io/bighand2.2M/"
+    ],
+    "notes": "当前主页含 HANDS 2019 评测说明，不可把挑战版划分与原始全集混为一谈。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "ls3d-w",
+    "name": "LS3D-W",
+    "year": 2017,
+    "category": "Head",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "把现有二维人脸关键点通过模型转换为统一的三维标注约定。",
+    "modalities": [
+      "RGB",
+      "RGB video"
+    ],
+    "annotations": [
+      "68 点统一三维关键点"
+    ],
+    "scale": "约 230,000 图像/视频帧",
+    "access": "作者网页提供申请表，含完整集与均衡子集",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://www.adrianbulat.com/face-alignment",
+    "sources": [
+      "https://www.adrianbulat.com/face-alignment"
+    ],
+    "notes": "自动转换标注，不能视为全部经三维传感器测量。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "mpi-inf-3dhp",
+    "name": "MPI-INF-3DHP",
+    "year": 2017,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "多相机无标记动捕提供训练数据，并包含室内外测试场景。",
+    "modalities": [
+      "RGB",
+      "多视角"
+    ],
+    "annotations": [
+      "三维人体关节",
+      "相机信息"
+    ],
+    "scale": "本轮未核实统一帧数",
+    "access": "项目页下载包及说明",
+    "license": "待核实；公开可下载不等于可商用",
+    "url": "https://vcai.mpi-inf.mpg.de/3dhp-dataset/",
+    "sources": [
+      "https://vcai.mpi-inf.mpg.de/3dhp-dataset/"
+    ],
+    "notes": "官方记录 TS3/TS4/TS6 标注修订，使用时应记录版本。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "menpo2d",
+    "name": "Menpo2D",
+    "year": 2017,
+    "category": "Head",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "分别处理半正面与侧面的人脸关键点定位基准。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "半正面 68 点",
+      "侧面 39 点"
+    ],
+    "scale": "训练 6,653 半正面 + 2,290 侧面；测试 5,335 + 1,946",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "作者要求遵守各原始图像数据集许可",
+    "url": "https://github.com/jiankangdeng/MenpoBenchmark",
+    "sources": [
+      "https://github.com/jiankangdeng/MenpoBenchmark"
+    ],
+    "notes": "此条仅统计作者仓库中的 Menpo2D 图像划分，不合并 300W、COFW 或 Menpo3D。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "pandora",
+    "name": "Pandora",
+    "year": 2017,
+    "category": "Head",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "面向汽车场景的头部中心、头姿与肩部姿态数据，包含 RGB 和深度序列。",
+    "modalities": [
+      "RGB",
+      "Depth"
+    ],
+    "annotations": [
+      "头部中心",
+      "头部旋转",
+      "肩部旋转"
+    ],
+    "scale": "250,000+ RGB/深度图；110 序列；22 位参与者",
+    "access": "作者机构数据页面；当前下载可用性未测试",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://aimagelab-legacy.ing.unimore.it/imagelab/page.asp?IdPage=14",
+    "sources": [
+      "https://aimagelab-legacy.ing.unimore.it/imagelab/page.asp?IdPage=14"
+    ],
+    "notes": "图像数、成对模态数和序列数应分开统计。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "rhd",
+    "name": "Rendered Handpose Dataset (RHD)",
+    "year": 2017,
+    "category": "Hand",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "合成手部图像及精确几何标注，用于单目 RGB 三维手姿学习。",
+    "modalities": [
+      "RGB",
+      "Depth",
+      "Synthetic"
+    ],
+    "annotations": [
+      "21 关键点 UV/XYZ",
+      "可见性",
+      "分割",
+      "相机内参"
+    ],
+    "scale": "41,258 训练样本；2,728 测试样本",
+    "access": "官网下载 7.1 GB",
+    "license": "仅研究用途，禁止商业使用，需引用",
+    "url": "https://lmb.informatik.uni-freiburg.de/resources/datasets/RenderedHandposeDataset.en.html",
+    "sources": [
+      "https://lmb.informatik.uni-freiburg.de/resources/datasets/RenderedHandposeDataset.en.html"
+    ],
+    "notes": "合成域与真实图像有差异；不要将样本数视为独立真实场景数。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "surreal",
+    "name": "SURREAL",
+    "year": 2017,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "由动捕驱动的合成人体视频，提供姿态、深度和人体部件监督。",
+    "modalities": [
+      "合成 RGB",
+      "深度",
+      "光流"
+    ],
+    "annotations": [
+      "姿态",
+      "深度",
+      "分割"
+    ],
+    "scale": "超过 6M 帧",
+    "access": "接受许可后申请个人下载凭据",
+    "license": "专用数据许可；下载前核对",
+    "url": "https://www.di.ens.fr/willow/research/surreal/",
+    "sources": [
+      "https://www.di.ens.fr/willow/research/surreal/",
+      "https://github.com/gulvarol/surreal"
+    ],
+    "notes": "",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "up3d",
+    "name": "UP-3D",
+    "year": 2017,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "把二维图像与经人工筛选的三维人体模型拟合联系起来。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "三维人体拟合",
+      "二维关键点",
+      "部件分割"
+    ],
+    "scale": "本轮未核实统一规模",
+    "access": "作者项目页下载",
+    "license": "研究用途；原始图像和模型条款需另核对",
+    "url": "https://files.is.tuebingen.mpg.de/classner/up/",
+    "sources": [
+      "https://files.is.tuebingen.mpg.de/classner/up/"
+    ],
+    "notes": "三维标签来自模型拟合与人工筛选，不等同于直接动捕真值。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "300w-lp",
+    "name": "300W-LP",
+    "year": 2016,
+    "category": "Head",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "通过人脸 profiling 扩展 300-W 的姿态范围，常用于三维对齐与头姿模型训练。",
+    "modalities": [
+      "RGB",
+      "synthetic augmentation"
+    ],
+    "annotations": [
+      "三维人脸参数",
+      "二维/三维关键点",
+      "头姿"
+    ],
+    "scale": "规模本轮未核实；需区分翻转前后版本",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://xiangyuzhu-open.github.io/homepage/",
+    "sources": [
+      "https://xiangyuzhu-open.github.io/homepage/",
+      "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf"
+    ],
+    "notes": "合成扩增与原 300-W 图像有血缘关系，拆分时避免泄漏。",
+    "verified_at": "2026-11-18",
+    "paper": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf"
+  },
+  {
+    "id": "aflw2000-3d",
+    "name": "AFLW2000-3D",
+    "year": 2016,
+    "category": "Head",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "为 AFLW 前 2,000 个样本拟合三维人脸，用于大姿态三维对齐评测。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "68 点三维关键点",
+      "拟合三维人脸/姿态"
+    ],
+    "scale": "2,000 图",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://xiangyuzhu-open.github.io/homepage/",
+    "sources": [
+      "https://xiangyuzhu-open.github.io/homepage/",
+      "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf"
+    ],
+    "notes": "标注来自三维拟合，不是三维扫描实测。",
+    "verified_at": "2026-11-18",
+    "paper": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf"
+  },
+  {
+    "id": "panoptic",
+    "name": "CMU Panoptic Studio",
+    "year": 2016,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "大规模多视角社会互动采集，可用于多人姿态及跨视角几何研究。",
+    "modalities": [
+      "RGB",
+      "多视角",
+      "RGB-D（部分序列）"
+    ],
+    "annotations": [
+      "三维人体姿态",
+      "相机标定"
+    ],
+    "scale": "按官方序列清单选择；本轮未核实总帧数",
+    "access": "官方工具脚本下载",
+    "license": "仅非商业研究用途",
+    "url": "https://domedb.perception.cs.cmu.edu/",
+    "sources": [
+      "https://domedb.perception.cs.cmu.edu/",
+      "https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox"
+    ],
+    "notes": "2016 为官方公开发布年；系统论文始于 2015。各序列可用标注不同。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "mafl",
+    "name": "MAFL",
+    "year": 2016,
+    "category": "Head",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "多属性人脸关键点数据，用于五点定位及属性辅助学习。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "5 点二维关键点",
+      "40 个面部属性"
+    ],
+    "scale": "20,000 图",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://mmlab.ie.cuhk.edu.hk/projects/TCDCN.html",
+    "sources": [
+      "https://mmlab.ie.cuhk.edu.hk/projects/TCDCN.html"
+    ],
+    "notes": "年份采用作者主页公开数据说明的 2016 年；与 MTFL 是不同条目。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "300vw",
+    "name": "300-VW",
+    "year": 2015,
+    "category": "Head",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "针对长视频中的面部关键点检测与跟踪，覆盖光照变化及遮挡。",
+    "modalities": [
+      "RGB video"
+    ],
+    "annotations": [
+      "逐帧 68 点二维关键点"
+    ],
+    "scale": "每段视频约 1 分钟、25–30 fps；总量本轮未核实",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://ibug.doc.ic.ac.uk/resources/300-VW/",
+    "sources": [
+      "https://ibug.doc.ic.ac.uk/resources/300-VW/"
+    ],
+    "notes": "",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "coco-keypoints",
+    "name": "COCO Keypoints",
+    "year": 2014,
+    "category": "Human",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "自然图像多人关键点基准；规模统计需区分 COCO 全集与关键点子集。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "人体二维关键点",
+      "人物实例"
+    ],
+    "scale": "官方主页列出约 250,000 个带关键点人物实例",
+    "access": "官方下载页",
+    "license": "待核实；公开可下载不等于可商用",
+    "url": "https://cocodataset.org/",
+    "sources": [
+      "https://cocodataset.org/"
+    ],
+    "notes": "2014 为 COCO 数据集论文年份；具体实验应注明 2017 等划分版本。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "human36m",
+    "name": "Human3.6M",
+    "year": 2014,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "室内多视角同步采集的人体姿态基准，适合三维姿态与二维到三维 lifting。",
+    "modalities": [
+      "RGB",
+      "动作捕捉"
+    ],
+    "annotations": [
+      "三维人体姿态",
+      "相机标定"
+    ],
+    "scale": "3.6M 姿态，11 名演员，4 个视角",
+    "access": "官网注册申请；遵守原始数据条款",
+    "license": "待核实；公开可下载不等于可商用",
+    "url": "https://vision.imar.ro/human3.6m/description.php",
+    "sources": [
+      "https://vision.imar.ro/human3.6m/description.php"
+    ],
+    "notes": "2014 为 TPAMI 卷期年；不把不同协议的 MPJPE 直接混比。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "icvl-hand",
+    "name": "ICVL Hand Posture",
+    "year": 2014,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "单深度图关节定位，官方同时提供原标注及新标注。",
+    "modalities": [
+      "Depth"
+    ],
+    "annotations": [
+      "16 关节 UVD"
+    ],
+    "scale": "规模未在本轮官方页面核实",
+    "access": "官方训练/测试下载链接",
+    "license": "数据许可未核实；以官方数据条款为准，不沿用代码或网页模板许可证",
+    "url": "https://labicvl.github.io/hand.html",
+    "sources": [
+      "https://labicvl.github.io/hand.html"
+    ],
+    "notes": "x/y 为像素、z 为毫米；关节点定义为关节中心。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "mpii",
+    "name": "MPII Human Pose",
+    "year": 2014,
+    "category": "Human",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "以日常活动分类采样的自然图像人体姿态数据，测试标注不公开。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "人体二维关节",
+      "活动类别",
+      "遮挡信息"
+    ],
+    "scale": "约 25K 图像、40K 人物、410 种活动",
+    "access": "官方 Download 页面",
+    "license": "待核实；公开可下载不等于可商用",
+    "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/software-and-datasets/mpii-human-pose-dataset",
+    "sources": [
+      "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/software-and-datasets/mpii-human-pose-dataset"
+    ],
+    "notes": "",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "mtfl",
+    "name": "MTFL",
+    "year": 2014,
+    "category": "Head",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "面部关键点与头姿、性别、微笑、眼镜属性的多任务学习数据。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "5 点二维关键点",
+      "头姿属性",
+      "面部属性"
+    ],
+    "scale": "12,995 图",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://mmlab.ie.cuhk.edu.hk/projects/TCDCN.html",
+    "sources": [
+      "https://mmlab.ie.cuhk.edu.hk/projects/TCDCN.html"
+    ],
+    "notes": "头姿属性不应当作精确连续旋转真值。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "nyu-hand",
+    "name": "NYU Hand Pose",
+    "year": 2014,
+    "category": "Hand",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "三视角 RGB-D 手姿基准，提供实拍与合成重建，适合深度姿态估计。",
+    "modalities": [
+      "RGB",
+      "Depth"
+    ],
+    "annotations": [
+      "36 手部位置 UVD/XYZ",
+      "相机多视角"
+    ],
+    "scale": "72,757 训练帧；8,252 测试帧；每帧 3 台 Kinect",
+    "access": "官方下载链接",
+    "license": "CC BY 4.0",
+    "url": "https://jonathantompson.github.io/NYU_Hand_Pose_Dataset.htm",
+    "sources": [
+      "https://jonathantompson.github.io/NYU_Hand_Pose_Dataset.htm"
+    ],
+    "notes": "训练只有 1 人，测试含 2 人；关节子集与相机视角应随评测报告。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "300w",
+    "name": "300-W",
+    "year": 2013,
+    "category": "Head",
+    "dimensions": [
+      "2D"
+    ],
+    "summary": "统一 68 点面部标注的野外人脸对齐基准；由多个既有数据集重标注及独立测试集构成。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "68 点二维关键点"
+    ],
+    "scale": "独立挑战测试集 600 图（室内/室外各 300）；其他划分需注明协议",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "仅研究；官方禁止商用训练",
+    "url": "https://ibug.doc.ic.ac.uk/resources/300-W/",
+    "sources": [
+      "https://ibug.doc.ic.ac.uk/resources/300-W/"
+    ],
+    "notes": "不要混淆 600 张挑战测试集与常用 689 张组合测试协议。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "aflw",
+    "name": "AFLW",
+    "year": 2011,
+    "category": "Head",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "网络野外人脸集合，含可见关键点、脸框及粗头姿标注。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "最多 21 点二维关键点",
+      "脸框",
+      "头姿"
+    ],
+    "scale": "25,993 张脸 / 21,997 张图像",
+    "access": "官方页面提供下载入口；本轮未实际下载",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://www.tugraz.at/institute/icg/research/team-bischof/learning-recognition-surveillance/downloads/aflw",
+    "sources": [
+      "https://www.tugraz.at/institute/icg/research/team-bischof/learning-recognition-surveillance/downloads/aflw",
+      "https://ieeexplore.ieee.org/abstract/document/6130513/"
+    ],
+    "notes": "不可见点不等于有精确三维真值；脸数与图像数不同。",
+    "verified_at": "2026-11-18",
+    "paper": "https://ieeexplore.ieee.org/abstract/document/6130513/"
+  },
+  {
+    "id": "multi-pie",
+    "name": "CMU Multi-PIE",
+    "year": 2009,
+    "category": "Head",
+    "dimensions": [],
+    "summary": "受控多视点、多光照与表情的人脸数据，可用于跨姿态研究。",
+    "modalities": [
+      "multiview RGB"
+    ],
+    "annotations": [
+      "视点",
+      "光照与表情条件"
+    ],
+    "scale": "750,000+ 图像；337 人；15 视点；19 光照条件",
+    "access": "按官方获取/订购说明申请；本轮未完成申请",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://www.cs.cmu.edu/afs/cs/project/PIE/MultiPie/Multi-Pie/Home.html",
+    "sources": [
+      "https://www.cs.cmu.edu/afs/cs/project/PIE/MultiPie/Multi-Pie/Home.html"
+    ],
+    "notes": "年份为官方开始接受订购的 2009 年。提供受控相机视点条件，不等于每帧自由头姿或逐点三维真值；本轮未核实其 2D/3D 姿态标注，故不纳入维度筛选。",
+    "verified_at": "2026-11-18"
+  },
+  {
+    "id": "pointing04",
+    "name": "Pointing’04 / Head Pose Image Database",
+    "year": 2004,
+    "category": "Head",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "以离散 pan/tilt 角度采集的经典单目头姿基准。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "pan",
+      "tilt"
+    ],
+    "scale": "2,790 图；15 人",
+    "access": "作者页面可被搜索索引；本轮直接访问超时，下载状态待核实",
+    "license": "数据许可未核实，请按官方条款使用",
+    "url": "https://crowley-coutaz.fr/Head%20Pose%20Image%20Database.html",
+    "sources": [
+      "https://crowley-coutaz.fr/Head%20Pose%20Image%20Database.html"
+    ],
+    "notes": "角度标签不等同连续 6DoF 标注。",
+    "verified_at": "2026-11-18"
+  }
+]
