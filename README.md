@@ -91,7 +91,7 @@ Use primary project, institution or paper sources. Preserve version-specific qua
 Nine original image assets across five datasets are currently verified for display. The remaining records link to their official examples, rather than reproducing images without verified permission. See [image provenance and licensing](IMAGE_GUIDE.md) and [asset manifest](assets/previews/manifest.json). Images retain their own licenses, separate from original dataset terms.
 
 ### 预览类型
-已核验原始示例与官网页面截图分别记录。页面截图明确标记来源与截取日期，不将其视为原始数据样例或数据集使用授权；第三方内容权利仍归原作者。无图卡片使用明确标注「暂无预览图」的中性占位，与真实图保持相同预览比例和说明栏高度，不伪装数据样例。见 [IMAGE_GUIDE.md](IMAGE_GUIDE.md)。
+已核验原始示例与官网页面截图分别记录。页面截图明确标记来源与截取日期，不将其视为原始数据样例或数据集使用授权；第三方内容权利仍归原作者。无图卡片使用对应数据集名称、研究类别及维度/模态组成的索引封面，与真实图保持相同预览比例和说明栏高度，不伪装数据样例。见 [IMAGE_GUIDE.md](IMAGE_GUIDE.md)。
 
 ### 关联论文与字体
 每个条目的 `papers` 数组记录已核验的 `{title, url, venue, year}`。标题与 HTTPS 链接必需；载体或年份缺失时显示待核实，不从目录年份推断。首页展示首篇并链接其余论文的详情，详情列出全部论文。论文标题与发表载体参与搜索，年度图仍统计数据集目录年份。
