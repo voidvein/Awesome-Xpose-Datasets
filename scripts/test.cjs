@@ -13,3 +13,15 @@ assert.equal(JSON.stringify(data),before);assert.equal(safeUrl('javascript:alert
 const synthetic=[normalize({id:'multi',name:'Multi',year:2020,categories:['Head','Human'],dimensions:['2D'],modalities:['RGB']})];assert.equal(filterDatasets(synthetic,{category:'Head'}).length,1);assert.equal(yearCounts(synthetic).reduce((a,x)=>a+x.count,0),1);
 const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');for(const id of ['search','dimension','year','modality','sort','categories','cards','year-chart','detail-view'])assert.ok(html.includes('id="'+id+'"'));
 console.log('PASS: '+data.length+' unique sourced datasets; schema, URLs, categories, dimensions, combined filters, dynamic chart/year isolation, safe links, multitag deduplication and nonmutation.');
+const {datasetImages}=require('../app.js');
+const example={src:'assets/previews/test.webp',source:'https://example.com/data',alt:'Dataset sample showing annotated hand joints',caption:'Sample',attribution:'Dataset authors',license:'CC BY 4.0',license_url:'https://creativecommons.org/licenses/by/4.0/',verified_at:'2026-11-18'};
+assert.equal(datasetImages({images:[example]}).length,1);
+assert.equal(datasetImages({images:[example,example]}).length,1);
+for(const key of ['src','source','alt','attribution','license','verified_at'])assert.equal(datasetImages({images:[{...example,[key]:''}]}).length,0,key+' required');
+for(const src of ['../private.png','assets/previews/../secret.png','javascript:alert(1)','data:image/png;base64,a','assets/previews/test.svg'])assert.equal(datasetImages({images:[{...example,src}]}).length,0);
+assert.equal(datasetImages({images:[{...example,src:'https://example.com/sample.jpg'}]}).length,1);
+for(const p of raw)for(const f of datasetImages(p)){if(f.src.startsWith('assets/'))assert.ok(fs.existsSync(path.join(__dirname,'..',f.src)),p.id+' local image exists');}
+console.log('PASS: verified image schema, attribution gate, safe paths/HTTPS, deduplication and local image existence.');
+const crypto=require('node:crypto');
+const manifestFile=path.join(__dirname,'../assets/previews/manifest.json');
+if(fs.existsSync(manifestFile)){const manifest=JSON.parse(fs.readFileSync(manifestFile,'utf8'));for(const m of manifest){const p=raw.find(x=>x.id===m.dataset_id),image=datasetImages(p).find(x=>x.src===m.src);assert.ok(image,m.dataset_id+' manifest image is displayed');assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(__dirname,'..',m.src))).digest('hex'),m.sha256);assert.ok(m.modifications&&m.rights_evidence);assert.equal(image.license,m.license);assert.equal(image.source,m.source);}console.log('PASS: image manifest integrity, source/license consistency and original file checksums.');}
