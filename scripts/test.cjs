@@ -30,3 +30,14 @@ assert.equal(datasetImages({images:[screenshot]}).length,1);
 for(const key of ['source','attribution','captured_at','rights_note'])assert.equal(datasetImages({images:[{...screenshot,[key]:''}]}).length,0,key+' required for screenshot');
 assert.equal(datasetImages({images:[{...screenshot,kind:'dataset-sample'}]}).length,0,'Screenshots do not relax sample license gate');
 console.log('PASS: separate screenshot provenance gate; no implied dataset/sample license.');
+const {datasetPapers}=require('../app.js');
+const paper={title:'Example Dataset Paper',url:'https://example.com/paper',venue:'CVPR',year:2021};
+assert.equal(datasetPapers({papers:[paper,paper]}).length,1);
+assert.equal(datasetPapers({papers:[{...paper,url:'javascript:bad'}]}).length,0);
+assert.equal(datasetPapers({papers:[{...paper,title:''}]}).length,0);
+assert.equal(datasetPapers({papers:[{title:paper.title,url:paper.url}]}).length,1);
+assert.equal(datasetPapers({papers:[{...paper,year:0} ]})[0].year,null);
+assert.equal(filterDatasets([normalize({id:'test',name:'Test',year:2020,papers:[paper]})],{query:'Example Dataset Paper'}).length,1);
+console.log('PASS: associated paper schema, URL/title gate, deduplication, unknown venue/year and linked-paper search.');
+for(const p of raw){assert.ok(datasetPapers(p).length>0,p.id+' has a verified associated paper');assert.equal(datasetPapers(p).length,p.papers.length,p.id+' paper list passes schema without dropping entries');for(const paper of p.papers){assert.ok(paper.venue&&Number.isInteger(paper.year),p.id+' source venue/year provided');}}
+console.log('PASS: all catalog entries have valid paper metadata; publication years remain independent of dataset years.');
