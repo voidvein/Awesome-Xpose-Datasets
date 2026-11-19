@@ -22,16 +22,19 @@
       "深度及可选前景掩码"
     ],
     "scale": "官方 Hugging Face v1 数据卡与 arXiv v3：约 2.5M 单手、4.1M 交互图像。官网 Dataset 节仍写 2.1M/4.2M，与其摘要不一致；精确样本数应按固定版本 manifest 核验。",
-    "access": "官方 Hugging Face 已公开 train/test TAR 分片及校验清单；本次核验入口与文档，未下载整套数据。",
+    "access": "官方 Hugging Face 已公开 train/test TAR 分片及校验清单；本次核验入口与文档，未下载整套数据。 官方工具包可读取和预览 TAR 分片；合成生成代码亦已公开，但需自行取得外部素材。HaMeR/WiLoR 微调权重已发布，AnyHandNet-D 仍待发布。",
     "license": "数据：CC BY-NC-ND 4.0；toolkit：MIT。第三方模型、纹理和物体素材可能另有限制，不可混同。",
     "url": "https://chen-si-cs.github.io/projects/AnyHand/",
     "sources": [
       "https://chen-si-cs.github.io/projects/AnyHand/",
       "https://huggingface.co/datasets/chen-si-02/AnyHand-Dataset",
-      "https://arxiv.org/abs/2603.25726v3"
+      "https://arxiv.org/abs/2603.25726v3",
+      "https://github.com/chen-si-cs/AnyHand",
+      "https://github.com/chen-si-cs/anyhand-toolkit",
+      "https://github.com/chen-si-cs/AnyHand-Generation"
     ],
     "notes": "标注含相机坐标与尺度，便于检验 RGB-D 融合及遮挡重建。前景深度来自渲染，背景深度为 MoGe-2 估计与合成，不是全图精确真值；应单独报告真实数据测试，注意合成域差距及边界伪影。数据卡未保证训练测试间手形、纹理或物体身份互斥；固定下载 revision 并保留 manifest 有助复现。",
-    "verified_at": "2026-11-19",
+    "verified_at": "2026-11-20",
     "papers": [
       {
         "title": "AnyHand: A Large-Scale Synthetic Dataset for RGB(-D) Hand Pose Estimation",
@@ -80,6 +83,47 @@
     ]
   },
   {
+    "id": "show3d",
+    "name": "SHOW3D",
+    "year": 2026,
+    "category": "Hand",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "在自然场景同步采集第一与第三人称视角，提供手物姿态，适合评估跨视角重建及接触建模。",
+    "modalities": [
+      "RGB",
+      "Multi-view",
+      "Egocentric"
+    ],
+    "annotations": [
+      "手部关键点及网格参数",
+      "物体姿态",
+      "交互场",
+      "相机标定",
+      "文本描述"
+    ],
+    "scale": "现行数据卡：2,137 段录制，4,276,772 个同步时间步，约 4,250 万张多相机图像。",
+    "access": "官方 Hugging Face 已发布数据。2026-10-19 发布 hand_pose/v3 测试部分；object_pose/v2 和 interaction_field/v1 覆盖 1,176 段训练及 390 段测试录制。",
+    "license": "官方数据卡：CC BY-NC 4.0。",
+    "url": "https://huggingface.co/datasets/facebook/show3d-dataset",
+    "sources": [
+      "https://huggingface.co/datasets/facebook/show3d-dataset",
+      "https://openaccess.thecvf.com/content/CVPR2026/papers/Rim_SHOW3D_Capturing_Scenes_of_3D_Hands_and_Objects_in_the_CVPR_2026_paper.pdf"
+    ],
+    "notes": "原生求解为 UmeTrack；MANO 和 MHR 为重定向版本。视角帧和同步时间步分别计数，并非每段录制都有物体标注；请固定各标注组件的版本。",
+    "verified_at": "2026-11-20",
+    "papers": [
+      {
+        "title": "SHOW3D: Capturing Scenes of 3D Hands and Objects in the Wild",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Rim_SHOW3D_Capturing_Scenes_of_3D_Hands_and_Objects_in_the_CVPR_2026_paper.pdf",
+        "venue": "CVPR 2026",
+        "year": 2026
+      }
+    ]
+  },
+  {
     "id": "gigahands",
     "name": "GigaHands",
     "year": 2025,
@@ -117,6 +161,50 @@
         "title": "GigaHands: A Massive Annotated Dataset of Bimanual Hand Activities",
         "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Fu_GigaHands_A_Massive_Annotated_Dataset_of_Bimanual_Hand_Activities_CVPR_2025_paper.html",
         "venue": "CVPR",
+        "year": 2025
+      }
+    ]
+  },
+  {
+    "id": "octonet",
+    "name": "OctoNet",
+    "year": 2025,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "用于人体三维姿态、跨模态融合和活动识别的同步多传感器数据，使用专业动作捕捉提供三维监督。",
+    "modalities": [
+      "RGB",
+      "Depth",
+      "Thermal",
+      "Radar",
+      "Wi-Fi",
+      "IMU",
+      "MoCap"
+    ],
+    "annotations": [
+      "三维人体关节",
+      "活动标签",
+      "同步多模态观测"
+    ],
+    "scale": "论文：41 人、62 类活动、12 种模态，合计逾 6,772 万同步记录帧；不是独立姿态数。",
+    "access": "官方 Hugging Face 数据卡与文件可访问。本次未下载整库。",
+    "license": "官方数据卡：CC BY-NC 4.0。",
+    "url": "https://aiot-lab.github.io/OctoNet/",
+    "sources": [
+      "https://aiot-lab.github.io/OctoNet/",
+      "https://proceedings.neurips.cc/paper_files/paper/2025/hash/14950adea25005f89545688fe97fe5ea-Abstract-Datasets_and_Benchmarks_Track.html",
+      "https://huggingface.co/datasets/hku-aiot/OctoNet",
+      "https://arxiv.org/abs/2611.23477"
+    ],
+    "notes": "不同传感器采样率和视角不可混为同一计数。mmTherm 使用公共子集并留出用户 9–10 测试；不应把该协议等同于原始数据集的全部用户或默认划分。",
+    "verified_at": "2026-11-20",
+    "papers": [
+      {
+        "title": "OctoNet: A Large-Scale Multi-Modal Dataset for Human Activity Understanding Grounded in Motion-Captured 3D Pose Labels",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/14950adea25005f89545688fe97fe5ea-Abstract-Datasets_and_Benchmarks_Track.html",
+        "venue": "NeurIPS 2025 · Datasets and Benchmarks",
         "year": 2025
       }
     ]
@@ -605,6 +693,43 @@
         "title": "One-Stage 3D Whole-Body Mesh Recovery with Component Aware Transformer",
         "url": "https://arxiv.org/abs/2303.16160",
         "venue": "CVPR",
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "id": "arkitface",
+    "name": "ARKitFace",
+    "year": 2023,
+    "category": "Head",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "基于 iPhone 11 采集的人脸图像及 ARKit 姿态与网格，面向单目透视重建和 6DoF 头姿。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "三轴旋转与三维平移",
+      "1,220 顶点人脸网格"
+    ],
+    "scale": "论文：902,724 图像、500 人；训练 717,840 张/400 人，测试 184,884 张/100 人。",
+    "access": "官方仓库提供申请说明，须提交研究用途协议并等待审核。",
+    "license": "以作者数据使用协议为准；不将代码许可用于数据。",
+    "url": "https://github.com/cbsropenproject/6dof_face#download-dataset",
+    "sources": [
+      "https://github.com/cbsropenproject/6dof_face#download-dataset",
+      "https://ieeexplore.ieee.org/abstract/document/10127617",
+      "https://arxiv.org/html/2205.04126v2"
+    ],
+    "notes": "网格与 6DoF 来自 iPhone 11 内置 ARKit 跟踪，并非独立光学动作捕捉；跨库比较须注明坐标约定及域差异。",
+    "verified_at": "2026-11-20",
+    "papers": [
+      {
+        "title": "Towards 3D Face Reconstruction in Perspective Projection: Estimating 6DoF Face Pose from Monocular Image",
+        "url": "https://ieeexplore.ieee.org/abstract/document/10127617",
+        "venue": "IEEE TIP 2023",
         "year": 2023
       }
     ]
