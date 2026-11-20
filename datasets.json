@@ -2632,5 +2632,57 @@
         "year": 2004
       }
     ]
+  },
+  {
+    "id": "core4d",
+    "name": "CORE4D",
+    "year": 2024,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "两人协作搬移家居物体的时序三维数据，结合动作捕捉、外部多视角 RGB-D 和第一人称 RGB，适合研究遮挡下的双人姿态、人–物轨迹及协作动作生成。",
+    "modalities": [
+      "RGB",
+      "Depth",
+      "Multi-view",
+      "Egocentric",
+      "MoCap",
+      "Synthetic"
+    ],
+    "annotations": [
+      "双人 SMPL-X 姿态、形状与三维运动",
+      "刚体物体 6DoF 轨迹与扫描网格",
+      "2D 人物与物体分割",
+      "相机参数",
+      "动作标签"
+    ],
+    "scale": "CVPR 论文：CORE4D-Real 约 1,000 段真实协作序列、37 件扫描刚体物体；CORE4D-Synthetic 另约 10,000 段重定向序列、约 3,000 件刚体物体。实拍设四台外部 RGB-D 相机和头戴 RGB 相机。",
+    "access": "作者官网和说明仓库提供访问入口、文件定义、可视化和基准代码；Hugging Face 公开文件树约 1.18 TB，按需选 CORE4D_Real_human_object_motions_v2 下的人体动作包，外部 RGB-D 另行下载。作者近期提交的 SHA-256 清单只覆盖首组外部 RGB-D 多分卷压缩包。已核对入口和文件目录，未下载全库。",
+    "license": "作者在 GitHub #14 确认完整数据集和代码均为 CC BY-NC 4.0，数据仅限非商业使用；与官网 Dataset 元数据一致。说明仓库 README 仍标 CC BY 4.0，Hugging Face 元数据仍标 MIT；不要据此推定可商用。作者回复未逐项说明衍生媒体的再分发条款。SMPL-X 模型须遵循独立条款。",
+    "url": "https://core4d.github.io/",
+    "sources": [
+      "https://core4d.github.io/",
+      "https://github.com/leolyliu/CORE4D-Instructions",
+      "https://github.com/leolyliu/CORE4D-Instructions/blob/main/docs/file_definitions.md",
+      "https://huggingface.co/datasets/leolyliu/CORE4D/tree/main",
+      "https://huggingface.co/datasets/leolyliu/CORE4D/blob/main/README.md",
+      "https://github.com/CORE4D/CORE4D.github.io/blob/main/index.html",
+      "https://github.com/leolyliu/CORE4D-Instructions/issues/14#issuecomment-7008277936",
+      "https://github.com/leolyliu/CORE4D-Instructions/issues/15",
+      "https://huggingface.co/datasets/leolyliu/CORE4D/tree/main/CORE4D_Real_human_object_motions_v2",
+      "https://huggingface.co/datasets/leolyliu/CORE4D/commit/4c1898662cd455ec200a7cbda8ad787a39eef4ca",
+      "https://www.jinkuncao.com/FAB/"
+    ],
+    "notes": "目录年份为首次数据发布（2024），关联论文发表于 CVPR 2025。作者基准涉及人体–物体运动预测与交互合成，并非通用单帧人体关键点榜单。合成序列以真实动作为源重定向，不应混作独立实拍测试样本；注意固定真实动作标注版本及相机、坐标和切分协议。 第一人称视频的配套 MP3 以 LTC 保存时间码。作者在 #15 说明，第一与第三人称时钟可能存在同一拍摄日期共用的固定偏移，未记录偏移值，也未公开对齐脚本；与外部视频或动捕逐帧配对前应按日期校准并检查，不宜直接按帧号对齐。官方 CORE4D 项目页有动作与数据效果示例；FAB 作者页另展示 CORE4D-Real 20231002/007 的第三人称人体和第一人称手部同步推理，手部输出是 FAH 示例而非数据集额外标注；该同步片段也不代表原始文件已逐帧对齐。",
+    "verified_at": "2026-11-20",
+    "papers": [
+      {
+        "title": "CORE4D: A 4D Human-Object-Human Interaction Dataset for Collaborative Object REarrangement",
+        "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Liu_CORE4D_A_4D_Human-Object-Human_Interaction_Dataset_for_Collaborative_Object_REarrangement_CVPR_2025_paper.html",
+        "venue": "CVPR 2025",
+        "year": 2025
+      }
+    ]
   }
 ]

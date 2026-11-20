@@ -4,9 +4,13 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 [Browse the site](https://voidvein.github.io/Awesome-Xpose-Datasets/) · [Pose research companion](https://voidvein.github.io/Awesome-Xpose-estimation/)
 
+## 最近更新 · 2026-11-21（UTC+8）
+
+- 新增 **[CORE4D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=core4d)**：两人协作搬移物体的时序三维数据。详情区分真实与合成序列，附 CVPR 2025 论文、官方演示、v2 动作数据入口，以及作者确认的非商用许可和时间对齐注意事项。
+
 ## Scope
 
-62 datasets: Head 18, Hand 22, Human 23 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
+63 datasets: Head 18, Hand 22, Human 24 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
 
 ## Run and validate
 
@@ -73,6 +77,7 @@ Run `node --check app.js && node scripts/test.cjs`.
 
 ### Human
 
+- **[CORE4D](https://core4d.github.io/)** · 2024 · 3D — 两人协作搬移物体的时序人体姿态与 6DoF 物体轨迹，含实拍与动作重定向子集。
 - **[OctoNet](https://aiot-lab.github.io/OctoNet/)** · 2025 · 3D — 用于人体三维姿态、跨模态融合和活动识别的同步多传感器数据，使用专业动作捕捉提供三维监督。
 
 - **[Ego-Exo4D](https://ego-exo4d-data.org/)** · 2024 · 2D/3D — 同步第一与第三人称技能活动视频，EgoPose 子任务提供手部和人体关键点，适合研究真实活动中的遮挡、多视角融合与第一人称姿态估计。
