@@ -1325,16 +1325,17 @@
       "物体姿态",
       "手形参数"
     ],
-    "scale": "不同版本规模待核实",
-    "access": "官方仓库提供 v2/v3 下载和评测 GT",
+    "scale": "v2：77,558 张图像（训练 66,034，测试 11,524）；v3：103,462 张（训练 83,325，测试 20,137）。两版均覆盖 10 名参与者和 10 件物体。",
+    "access": "官方仓库分别提供 v2/v3 下载；两版评测真值于 2024 年 11 月公开，可用作者的 eval.py 按版本本地评测。",
     "license": "数据许可未核实；以官方数据条款为准，不沿用代码或网页模板许可证",
     "url": "https://github.com/shreyashampali/ho3d",
     "sources": [
-      "https://github.com/shreyashampali/ho3d"
+      "https://github.com/shreyashampali/ho3d",
+      "https://arxiv.org/html/2107.00887v1#S1.T1"
     ],
-    "notes": "v3 于 2021 年改进标注；2024 年公开 v2/v3 评测 GT。不要与 H2O 或 H₂O-3D 混淆。",
+    "notes": "v3 于 2021 年发布，改进手与物体姿态标注。比较结果时注明 v2 或 v3，并使用对应测试集、评测真值和脚本参数。不要与 H2O 或 H₂O-3D 混淆。",
     "paper": "https://arxiv.org/abs/1907.01481",
-    "verified_at": "2026-11-18",
+    "verified_at": "2026-11-21",
     "papers": [
       {
         "title": "HOnnotate: A Method for 3D Annotation of Hand and Object Poses",
@@ -2682,6 +2683,139 @@
         "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Liu_CORE4D_A_4D_Human-Object-Human_Interaction_Dataset_for_Collaborative_Object_REarrangement_CVPR_2025_paper.html",
         "venue": "CVPR 2025",
         "year": 2025
+      }
+    ]
+  },
+  {
+    "id": "sam-3d-body-annotations",
+    "name": "SAM 3D Body Annotations",
+    "year": 2025,
+    "category": "Human",
+    "dimensions": [
+      "2D",
+      "3D"
+    ],
+    "summary": "Meta 为 SAM 3D Body 发布的标注包，为八种已有数据提供全身姿态与网格训练或评估入口；不是原始图像再发布。",
+    "modalities": [
+      "RGB"
+    ],
+    "annotations": [
+      "人体姿态与网格相关标注；具体字段和切分按上游来源核对"
+    ],
+    "scale": "Hugging Face 页面列包体约 24.2 GB、8 个父数据集；并不代表 Meta 论文所称约 700 万训练图像均可下载。InstantHMR 的约 420 万是其训练所用人体裁剪数，单位和范围不同。",
+    "access": "须在 Hugging Face 登录、同意提供账户信息并申请访问；获批后可按 split 下载标注。原始图像需按官方指引从各来源另外取得，再按需转换为 WebDataset。未申请、未下载。",
+    "license": "Meta 标注包为 SAM License；原始图像不随标注统一授予权限，分别遵循各父数据集及单张图像条款，不可从 SAM License 推定统一商用。InstantHMR 普通权重的非商业说明另见作者仓库；medium-commercial 仍有 SAM License 条件。",
+    "url": "https://huggingface.co/datasets/facebook/sam-3d-body-dataset",
+    "sources": [
+      "https://huggingface.co/datasets/facebook/sam-3d-body-dataset",
+      "https://github.com/facebookresearch/sam-3d-body/blob/main/data/README.md",
+      "https://github.com/facebookresearch/sam-3d-body/blob/main/LICENSE",
+      "https://arxiv.org/html/2602.15989v1",
+      "https://arxiv.org/abs/2611.09195v2",
+      "https://github.com/Naturalpad-studio/InstantHMR"
+    ],
+    "notes": "父数据集为 3DPW、AI Challenger、COCO、EgoExo4D、EgoHumans、Harmony4D、MPII 与 SA-1B。Meta 论文作者为 Xitong Yang 等；InstantHMR 是独立团队的下游模型。目录年份为标注发布年，关联论文年份为正式发表年。",
+    "verified_at": "2026-11-20",
+    "papers": [
+      {
+        "title": "SAM 3D Body: Robust Full-Body Human Mesh Recovery",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Yang_SAM_3D_Body_Robust_Full-Body_Human_Mesh_Recovery_CVPR_2026_paper.html",
+        "venue": "CVPR 2026",
+        "year": 2026
+      }
+    ]
+  },
+  {
+    "id": "fit3d",
+    "name": "Fit3D",
+    "year": 2021,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "面向健身动作的多视角人体姿态与形状数据，覆盖深蹲、负重等常见 3D 重建基准较少涉及的极端关节姿态。",
+    "modalities": [
+      "RGB",
+      "Multi-view",
+      "MoCap"
+    ],
+    "annotations": [
+      "25 关节三维骨架（含 Human3.6M 17 点）",
+      "GHUM 与 SMPL-X 拟合参数",
+      "相机内外参",
+      "动作类别与重复区间"
+    ],
+    "scale": "官网列 611 段多视角录制和 2,444 组视角视频／重复区间；2026 年研究统计 13 人、47 类练习、约 300 万 RGB 图像。四台标定 RGB 相机以 50 fps 采集，视角图像数不等同独立姿态时刻。",
+    "access": "官网提供数据下载与挑战赛入口；公共测试每段仅给一个视角。已核对入口，下载页面超时，未读取数据包。",
+    "license": "未核实下载页的当前数据条款；勿按关联论文或代码许可推定可再分发。",
+    "url": "https://fit3d.imar.ro/",
+    "sources": [
+      "https://fit3d.imar.ro/fit3d",
+      "https://fit3d.imar.ro/challenges",
+      "https://fit3d.imar.ro/download",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC13413046/",
+      "https://arxiv.org/html/2611.02929v1"
+    ],
+    "notes": "2026 年研究报告按人划分训练／验证／测试 8／2／3，测试分析覆盖 141 段。GHUM 从 Vicon 标记、多视角视觉和受试者扫描拟合，随后转换至 SMPL-X 拓扑；拟合网格是伪真值。Fieraru（2026）独立复跑 19 种方法：在公共单目测试的均匀采样帧、提供的相机内参与 Human3.6M 17 点协议下，SAM 3D Body 为 70.65 mm MPJPE、37.89 mm PA-MPJPE，表 3 标作未用 Fit3D 训练；并非 Meta 自报，未评估 Fast。另有独立 lifting 预印本用真值 2D 或检测器作输入，其采样和评测不可与上述数字混合。",
+    "verified_at": "2026-11-21",
+    "papers": [
+      {
+        "title": "AIFit: Automatic 3D Human-Interpretable Feedback Models for Fitness Training",
+        "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Fieraru_AIFit_Automatic_3D_Human-Interpretable_Feedback_Models_for_Fitness_Training_CVPR_2021_paper.html",
+        "venue": "CVPR 2021",
+        "year": 2021
+      },
+      {
+        "title": "Hitting the Gym with Fit3D: Benchmarking and Improving Monocular 3D Human Reconstruction on Extreme Fitness Motions",
+        "url": "https://doi.org/10.3390/jimaging12070311",
+        "venue": "Journal of Imaging",
+        "year": 2026
+      }
+    ]
+  },
+  {
+    "id": "egodex",
+    "name": "EgoDex",
+    "year": 2025,
+    "category": "Hand",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "Apple Vision Pro 录制的大规模第一人称桌面手物操作视频，配对 ARKit 双手、头部及上半身 3D 跟踪和语言描述；适合研究手部轨迹预测与灵巧操作。",
+    "modalities": [
+      "Egocentric RGB",
+      "Video",
+      "3D Tracking",
+      "Language"
+    ],
+    "annotations": [
+      "每只手 25 个关节的 3D 位姿",
+      "头部和上半身 3D 位姿",
+      "相机内外参",
+      "可选关节跟踪置信度",
+      "任务语言描述"
+    ],
+    "scale": "829 小时，约 33.8 万片段、9000 万帧，覆盖 194 种桌面任务；RGB 为 1920×1080、30 Hz。官方划分约 725 小时训练、7 小时测试，另有 97 小时在划分冻结后采集。",
+    "access": "Apple 仓库列出公开下载链接和读取 MP4/HDF5 的示例。测试 ZIP 约 16 GB，训练集分 5 包；可先用 Apple 文档列出的第三方 EgoDex Viewer 浏览测试样例。本次只核对入口和文档，未下载数据或运行查看器。",
+    "license": "Apple 仓库将数据标为 CC BY-NC-ND（署名、非商业、禁止演绎），代码另按仓库 LICENSE；勿将代码条款套用于视频、标注或派生媒体。",
+    "url": "https://github.com/apple-aiml-research/ml-egodex#readme",
+    "sources": [
+      "https://github.com/apple-aiml-research/ml-egodex#dataset-access-and-download",
+      "https://github.com/apple-aiml-research/ml-egodex#dataset-structure",
+      "https://github.com/apple-aiml-research/ml-egodex#license",
+      "https://github.com/apple-aiml-research/ml-egodex/blob/main/LICENSE",
+      "https://github.com/apple-aiml-research/ml-egodex/blob/main/compute_metrics.py",
+      "https://arxiv.org/html/2505.11709v3#S4",
+      "https://huggingface.co/spaces/pablovela5620/ego-dex-viewer"
+    ],
+    "notes": "关节和相机外参位于录制会话的 ARKit 原点坐标系；片段内稳定，不同片段未必共用原点。HDF5 置信度并非每个文件都有；合成 RGB 的透视差可能使 2D 重投影和视频不完全对齐，不能把重投影当作独立 2D 真值。官方评测在固定留出集上预测未来手部轨迹，另有给定目标帧的逆动力学任务。best-of-K 在 K 条预测里择最接近示范的轨迹，距离按预测时段和双手 12 个腕部/指尖点汇总；与已观测帧的姿态重建误差不可直接比较。",
+    "verified_at": "2026-11-21",
+    "papers": [
+      {
+        "title": "EgoDex: Learning Dexterous Manipulation from Large-Scale Egocentric Video",
+        "url": "https://openreview.net/pdf/d4fea01944202c75aa13dc34757e154478eb8df7.pdf",
+        "venue": "ICLR 2026",
+        "year": 2026
       }
     ]
   }

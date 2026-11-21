@@ -4,13 +4,18 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 [Browse the site](https://voidvein.github.io/Awesome-Xpose-Datasets/) · [Pose research companion](https://voidvein.github.io/Awesome-Xpose-estimation/)
 
-## 最近更新 · 2026-11-21（UTC+8）
+## 最近更新 · 2026-11-22（UTC+8）
+
+- **新增 3 个：** [SAM 3D Body Annotations](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=sam-3d-body-annotations) · [Fit3D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=fit3d) · [EgoDex](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=egodex)。当前共 66 个。
+- **更新已有详情：** [HO-3D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=ho3d) 的 v2/v3 样本数、拆分和本地评测。
+
+### 2026-11-21
 
 - 新增 **[CORE4D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=core4d)**：两人协作搬移物体的时序三维数据。详情区分真实与合成序列，附 CVPR 2025 论文、官方演示、v2 动作数据入口，以及作者确认的非商用许可和时间对齐注意事项。
 
 ## Scope
 
-63 datasets: Head 18, Hand 22, Human 24 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
+66 datasets: Head 18, Hand 23, Human 26 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
 
 ## Run and validate
 
@@ -49,6 +54,8 @@ Run `node --check app.js && node scripts/test.cjs`.
 
 ### Hand
 
+- **[EgoDex](https://github.com/apple-aiml-research/ml-egodex#readme)** · 2025 · 3D — Apple Vision Pro 录制的大规模第一人称桌面手物操作视频，配对 ARKit 双手、头部及上半身 3D 跟踪和语言描述；适合研究手部轨迹预测与灵巧操作。
+
 - **[SHOW3D](https://huggingface.co/datasets/facebook/show3d-dataset)** · 2026 · 2D/3D — 在自然场景同步采集第一与第三人称视角，提供手物姿态，适合评估跨视角重建及接触建模。
 
 - **[AnyHand](https://chen-si-cs.github.io/projects/AnyHand/)** · 2026 · 2D/3D — 已公开合成 RGB-D 手部与交互数据；详见条目中的规模冲突、深度来源及非商业许可说明。
@@ -76,6 +83,10 @@ Run `node --check app.js && node scripts/test.cjs`.
 - **[NYU Hand Pose](https://jonathantompson.github.io/NYU_Hand_Pose_Dataset.htm)** · 2014 · 2D/3D — 三视角 RGB-D 手姿基准，提供实拍与合成重建，适合深度姿态估计。
 
 ### Human
+
+- **[SAM 3D Body Annotations](https://huggingface.co/datasets/facebook/sam-3d-body-dataset)** · 2025 · 2D/3D — Meta 为 SAM 3D Body 发布的标注包，为八种已有数据提供全身姿态与网格训练或评估入口；不是原始图像再发布。
+
+- **[Fit3D](https://fit3d.imar.ro/)** · 2021 · 3D — 面向健身动作的多视角人体姿态与形状数据，覆盖深蹲、负重等常见 3D 重建基准较少涉及的极端关节姿态。
 
 - **[CORE4D](https://core4d.github.io/)** · 2024 · 3D — 两人协作搬移物体的时序人体姿态与 6DoF 物体轨迹，含实拍与动作重定向子集。
 - **[OctoNet](https://aiot-lab.github.io/OctoNet/)** · 2025 · 3D — 用于人体三维姿态、跨模态融合和活动识别的同步多传感器数据，使用专业动作捕捉提供三维监督。
