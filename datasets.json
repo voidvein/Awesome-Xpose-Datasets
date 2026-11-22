@@ -238,16 +238,32 @@
     "sources": [
       "https://ego-exo4d-data.org/",
       "https://docs.ego-exo4d-data.org/annotations/ego_pose/",
-      "https://docs.ego-exo4d-data.org/getting-started/"
+      "https://docs.ego-exo4d-data.org/getting-started/",
+      "https://arxiv.org/html/2504.08654v1#S4",
+      "https://github.com/masashi-hatano/EgoH4",
+      "https://arxiv.org/html/2605.07642v1#S4",
+      "https://arxiv.org/html/2605.07642v1#S5"
     ],
-    "notes": "目录年份按 CVPR 2024 论文，非数据版本更新年份。V1/V2 的 EgoPose 在有效时间戳提供标注，不能将总视频量当作手/身体人工标注样本数。以一个条目跨 Hand/Human 展示并按唯一 ID 计数；评测应采用相应 benchmark 官方划分。",
-    "verified_at": "2026-11-18",
+    "notes": "目录年份按 CVPR 2024 论文，非数据版本更新年份。V1/V2 的 EgoPose 在有效时间戳提供标注，不能将总视频量当作手/身体人工标注样本数。以一个条目跨 Hand/Human 展示并按唯一 ID 计数；评测应采用相应 benchmark 官方划分。\n\n下游任务：未来三维手部姿态预测与官方 EgoPose 对已采集帧的姿态估计不同。EgoH4 将 Ego-Exo4D 的身体与手部标注组合成约 15.6 万条训练序列和 3.4 万条评测序列（按手侧统计，不是原始视频或完整手部标注数）；第三人称自动身体标注仅用于训练。其方法用第一人称 RGB、相机姿态和可见手部二维标注作观测条件，借人体关节约束预测视野内外的双手三维运动。官方代码附权重入口。\n\nEggHand 在基于 EgoH4 的 10 fps 协议中，用 2 秒观测预测未来 1 秒。它以第一人称 RGB、观测期三维手部关节和文字任务描述为输入，不使用第三人称画面或全身跟踪。按 EggHand 论文表 1 与其报告的 EgoH4 基线相比，腕部平均位移误差 ADE 为 271 对 267 mm（略高），末帧位移误差 FDE 为 271 对 333 mm，以腕部为原点的关节误差 MPJPE 为 76 对 116 mm；这不是官方 EgoPose 排行，也不是只给 RGB 的等输入比较。EggHand 表 1 脚注称重训 EgoH4；EgoH4 原文表 2 的综合数值另有出入，不宜混用。",
+    "verified_at": "2026-11-22",
     "papers": [
       {
         "title": "Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives",
         "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Grauman_Ego-Exo4D_Understanding_Skilled_Human_Activity_from_First-_and_Third-Person_Perspectives_CVPR_2024_paper.html",
         "venue": "CVPR",
         "year": 2024
+      },
+      {
+        "title": "The Invisible EgoHand: 3D Hand Forecasting through EgoBody Pose Estimation",
+        "url": "https://arxiv.org/abs/2504.08654",
+        "venue": "arXiv",
+        "year": 2025
+      },
+      {
+        "title": "EggHand: A Multimodal Foundation Model for Egocentric Hand Pose Forecasting",
+        "url": "https://arxiv.org/abs/2605.07642",
+        "venue": "CVPR Findings",
+        "year": 2026
       }
     ],
     "categories": [
@@ -2816,6 +2832,48 @@
         "url": "https://openreview.net/pdf/d4fea01944202c75aa13dc34757e154478eb8df7.pdf",
         "venue": "ICLR 2026",
         "year": 2026
+      }
+    ]
+  },
+  {
+    "id": "opencap-labvalidation",
+    "name": "OpenCap LabValidation",
+    "year": 2023,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "面向人体动作生物力学验证的多视角手机 RGB 视频、光学动作捕捉与测力数据；该条目指实验室验证包，不包含另行发布的现场研究。",
+    "modalities": [
+      "RGB",
+      "Multi-view",
+      "MoCap",
+      "Force plates",
+      "EMG"
+    ],
+    "annotations": [
+      "光学动捕标记轨迹",
+      "地面反作用力与肌电",
+      "OpenSim 模型和逆运动学／动力学结果"
+    ],
+    "scale": "10 名成人，各两次录制；第一场含静态、坐站、深蹲和落地跳，第二场为步行。采集五个 RGB 视角，原论文另对比二／三／五相机配置。",
+    "access": "SimTK 列出 LabValidation_withVideos（2023-07-29，19,051 MB）与 LabValidation_withoutVideos（2022-12-20，2,889 MB）及各自下载入口；已核对列表，未下载文件或验证下载确认流程。",
+    "license": "SimTK 给两个实验室包均列 Apache 2.0 Use Agreement。PLOS 论文、代码和 OpenCap 在线服务各有独立条款；含可识别人物的视频，勿将原论文所述的发布同意推定为可任意二次发布。",
+    "url": "https://simtk.org/frs/?group_id=2385#pack_2354",
+    "sources": [
+      "https://simtk.org/frs/?group_id=2385#pack_2353",
+      "https://github.com/opencap-org/opencap-core/blob/main/ReproducePaperResults/labValidationVideosToKinematics.py",
+      "https://arxiv.org/html/2611.08954v1#S4.SS4",
+      "https://www.opencap.ai/terms-conditions"
+    ],
+    "notes": "2023 年论文将参考动捕用于运动学与动力学验证。MetricPose 是后续单目实验：剔除落地跳和一名无视频受试者，使用 9 人、90 段试验（约 33,500 帧），对每次录制估计刚性变换并按视频校准时间偏移，评测 12 个肢体关节；不是整个包的样本数，也不是 OpenCap 原论文的运动学／动力学协议。",
+    "verified_at": "2026-11-22",
+    "papers": [
+      {
+        "title": "OpenCap: Human movement dynamics from smartphone videos",
+        "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011462",
+        "venue": "PLOS Computational Biology",
+        "year": 2023
       }
     ]
   }

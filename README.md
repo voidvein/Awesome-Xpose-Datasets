@@ -4,7 +4,12 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 [Browse the site](https://voidvein.github.io/Awesome-Xpose-Datasets/) · [Pose research companion](https://voidvein.github.io/Awesome-Xpose-estimation/)
 
-## 最近更新 · 2026-11-22（UTC+8）
+## 最近更新 · 2026-11-23（UTC+8）
+
+- **新增 1 个：** [OpenCap LabValidation](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=opencap-labvalidation)，区分含／不含视频的数据包与后续单目评测子集。当前共 67 个。
+- **更新已有详情：** [Ego-Exo4D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=ego-exo4d) 新增 EgoH4 与 EggHand 两篇下游研究，区分三维手部姿态预测和官方 EgoPose。
+
+### 2026-11-22
 
 - **新增 3 个：** [SAM 3D Body Annotations](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=sam-3d-body-annotations) · [Fit3D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=fit3d) · [EgoDex](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=egodex)。当前共 66 个。
 - **更新已有详情：** [HO-3D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=ho3d) 的 v2/v3 样本数、拆分和本地评测。
@@ -15,7 +20,7 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 ## Scope
 
-66 datasets: Head 18, Hand 23, Human 26 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
+67 datasets: Head 18, Hand 23, Human 27 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
 
 ## Run and validate
 
@@ -83,6 +88,8 @@ Run `node --check app.js && node scripts/test.cjs`.
 - **[NYU Hand Pose](https://jonathantompson.github.io/NYU_Hand_Pose_Dataset.htm)** · 2014 · 2D/3D — 三视角 RGB-D 手姿基准，提供实拍与合成重建，适合深度姿态估计。
 
 ### Human
+
+- **[OpenCap LabValidation](https://simtk.org/frs/?group_id=2385#pack_2354)** · 2023 · 3D — 面向人体动作生物力学验证的多视角手机 RGB 视频、光学动作捕捉与测力数据；该条目指实验室验证包，不包含另行发布的现场研究。
 
 - **[SAM 3D Body Annotations](https://huggingface.co/datasets/facebook/sam-3d-body-dataset)** · 2025 · 2D/3D — Meta 为 SAM 3D Body 发布的标注包，为八种已有数据提供全身姿态与网格训练或评估入口；不是原始图像再发布。
 
