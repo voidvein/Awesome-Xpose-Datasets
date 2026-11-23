@@ -1676,10 +1676,12 @@
     "url": "https://virtualhumans.mpi-inf.mpg.de/3DPW/",
     "sources": [
       "https://virtualhumans.mpi-inf.mpg.de/3DPW/",
-      "https://virtualhumans.mpi-inf.mpg.de/3DPW/license.html"
+      "https://virtualhumans.mpi-inf.mpg.de/3DPW/license.html",
+      "https://www.mdpi.com/1424-8220/26/22/7283#sensors-26-07283-t003",
+      "https://www.mdpi.com/1424-8220/26/22/7283#sensors-26-07283-t008"
     ],
-    "notes": "",
-    "verified_at": "2026-11-18",
+    "notes": "下游协议：OA-Skeleton ST 用 OpenPose 置信度低于 0.3 标记缺失关节，在 3DPW 的 24 个测试视频上补全已知缺失位置，不是官方 3DPW 端到端姿态排行榜。以 IMU 辅助 SMPL 的可见关节三维参考为输入时，论文表 3 的缺失关节 MPJPE 为 79.1 mm，带运动学回退的插值为 92.8 mm；四个躯干基准关节不参与打分，人体坐标系不可构造时还有 7.4% 缺失关节帧被排除。改用 OpenPose → VideoPose3D 的三维输入时，针对提升器输出训练的变体和结构基线在表 8 的 PA-MPJPE 分别为 139.7 和 139.4 mm。注意两表的输入质量与对齐指标不同。",
+    "verified_at": "2026-11-22",
     "images": [
       {
         "kind": "page-screenshot",
@@ -1701,6 +1703,12 @@
         "url": "https://www.ecva.net/papers/eccv_2018/papers_ECCV/html/Timo_von_Marcard_Recovering_Accurate_3D_ECCV_2018_paper.php",
         "venue": "ECCV",
         "year": 2018
+      },
+      {
+        "title": "Reconstructing Occluded Joints in 3D Human Pose Sequences: A Real-Occlusion Benchmark and an Interpolation-Initialised Spatio-Temporal Transformer",
+        "url": "https://www.mdpi.com/1424-8220/26/22/7283",
+        "venue": "Sensors",
+        "year": 2026
       }
     ]
   },
@@ -2125,9 +2133,10 @@
     "url": "https://xiangyuzhu-open.github.io/homepage/",
     "sources": [
       "https://xiangyuzhu-open.github.io/homepage/",
-      "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf"
+      "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf",
+      "https://arxiv.org/html/2607.02565v1#S4.T5"
     ],
-    "notes": "标注来自三维拟合，不是三维扫描实测。",
+    "notes": "标注来自三维拟合，不是三维扫描实测。\n\n下游评测：ECCV 2026 的保形覆盖率研究用 SixDRepNet 在其报告的 1,969 个 AFLW2000-3D 样本上评估（非目录标称的 2,000 张），其中 278 个落在 |俯仰| > 60° 切片。表 5 中欧拉、测地与归一化测地的切片覆盖率分别为 55.2%、75.1% 和 80.3%；这是基于点预测的集合覆盖，不是头姿角度误差或 AFLW2000-3D 的通用排名。",
     "verified_at": "2026-11-18",
     "paper": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf",
     "papers": [
@@ -2136,6 +2145,12 @@
         "url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Zhu_Face_Alignment_Across_CVPR_2016_paper.html",
         "venue": "CVPR",
         "year": 2016
+      },
+      {
+        "title": "Coordinate Singularities Break Conformal Coverage for Gaze and Head Pose",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-37252-9_17",
+        "venue": "ECCV",
+        "year": 2026
       }
     ]
   },
@@ -2533,9 +2548,10 @@
     "sources": [
       "https://huggingface.co/datasets/ETHZurich/biwi_kinect_head_pose",
       "https://huggingface.co/datasets/ETHZurich/biwi_kinect_head_pose/blob/main/biwi_kinect_head_pose.py",
-      "https://is.mpg.de/ps/publications/fdgf12"
+      "https://is.mpg.de/ps/publications/fdgf12",
+      "https://arxiv.org/html/2607.02565v1#S4.T2"
     ],
-    "notes": "目录年份按加载脚本引用的 IJCV 2013 卷期（论文于 2012 年在线发表），不能视作首次数据公开年份。跨序列划分可能让同一人物进入训练与测试，应使用 sequence-to-subject 映射核查身份泄漏，并报告实际协议。旋转表示、坐标轴和角度约定须与官方标注一致。",
+    "notes": "目录年份按加载脚本引用的 IJCV 2013 卷期（论文于 2012 年在线发表），不能视作首次数据公开年份。跨序列划分可能让同一人物进入训练与测试，应使用 sequence-to-subject 映射核查身份泄漏，并报告实际协议。旋转表示、坐标轴和角度约定须与官方标注一致。\n\n下游评测：ECCV 2026 的坐标奇点与保形覆盖率研究在 BIWI 真值旋转上人为注入等方性噪声，以隔离评分几何；不是从 BIWI 图像估计头姿。其表 2 在 |俯仰| > 60° 的切片报告欧拉评分 57.5%、测地评分 89.5%（名义目标 90%）。论文的 24 名被试写法与 ETHZ 加载器的 24 序列、20 名独立参与者不同；该实验如何处理重复身份未核实。",
     "verified_at": "2026-11-18",
     "papers": [
       {
@@ -2543,6 +2559,12 @@
         "url": "https://doi.org/10.1007/s11263-012-0549-0",
         "venue": "International Journal of Computer Vision",
         "year": 2013
+      },
+      {
+        "title": "Coordinate Singularities Break Conformal Coverage for Gaze and Head Pose",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-37252-9_17",
+        "venue": "ECCV",
+        "year": 2026
       }
     ]
   },
@@ -2874,6 +2896,93 @@
         "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011462",
         "venue": "PLOS Computational Biology",
         "year": 2023
+      }
+    ]
+  },
+  {
+    "id": "movicam",
+    "name": "MoviCam",
+    "year": 2026,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "用动态单目 RGB 实拍平地与非平地上的人体运动，配套三维动捕、全局相机轨迹、非平地场景网格和足部接触标注，可分别检验关节误差、全局轨迹漂移与脚部滑移。",
+    "modalities": [
+      "RGB",
+      "Video",
+      "Multi-view MoCap",
+      "Scene mesh"
+    ],
+    "annotations": [
+      "由 Captury 对齐到 SMPL 的 24 个关节、人体形状和世界坐标根轨迹",
+      "移动相机外参：通过棚内相机观测棋盘格并用手眼标定获得",
+      "左右脚趾与脚跟的接触标签：足部关节距最近场景顶点小于 5 cm 即标为接触"
+    ],
+    "scale": "论文评测集约 2.2 万张图像，7 人、7 段序列（5 段非平地、2 段平地）。作者当前 README 所附的 DATASET.md 另列 8 个序列路径（6 个非平地、2 个平地）；两者口径不同，差异原因与归档实际帧数未核验。",
+    "access": "Edmond 元数据确认 v1.0 已于 2026-07-10 发布，列出 MoviCam.zip（约 97.94 GB，原始数据及处理后的基准）和 inputs.zip（约 6.66 MB，方法用接触标签和 PIP 参考姿态／形状），两附件均标为未限制。文件网页未能直接确认访问，未接受下载条款、未下载或解包验证。",
+    "license": "Edmond 的 v1.0 数据集条目明确标为 CC0 1.0；论文与代码、外部 SMPL 模型及项目预览素材的条款另计。Edmond 文档说明下载须确认使用条款。",
+    "url": "https://doi.org/10.17617/3.DGK9OM",
+    "sources": [
+      "https://edmond.mpg.de/api/datasets/:persistentId/?persistentId=doi:10.17617/3.DGK9OM",
+      "https://api.datacite.org/dois/10.17617/3.DGK9OM",
+      "https://www.edmond.mpg.de/Data_Access_Usage/",
+      "https://github.com/aidilayce/PhysDynPose/blob/main/DATASET.md#released-sequences",
+      "https://github.com/aidilayce/PhysDynPose#download-links",
+      "https://aidilayce.github.io/PhysDynPose/#dataset",
+      "https://arxiv.org/html/2507.17406v1#S3"
+    ],
+    "notes": "目录年份采用正式数据归档发布年（2026），介绍数据的论文为 CVPR 2025 RHOBIN Workshop。作者项目页提供移动相机视角和场景预览。复现 PhysDynPose 时，方法使用场景几何和接触标签，文中以真值相机前两帧对齐 SLAM；不应把该结果当作仅给单目 RGB 的对照。非平地实验表 2、3 中，相比同文 4DHumans + DROID-SLAM 基线，足部滑移从 13.99 降到 3.22 mm，但 MPJPE 从 128.01 升到 162.09 mm，两类指标应分别解读。",
+    "verified_at": "2026-11-22",
+    "papers": [
+      {
+        "title": "Physics-based Human Pose Estimation from a Single Moving RGB Camera",
+        "url": "https://openaccess.thecvf.com/content/CVPR2025W/RHOBIN/html/Aytekin_Physics-based_Human_Pose_Estimation_from_a_Single_Moving_RGB_Camera_CVPRW_2025_paper.html",
+        "venue": "CVPR RHOBIN Workshop",
+        "year": 2025
+      }
+    ]
+  },
+  {
+    "id": "cisyn",
+    "name": "CISyn",
+    "year": 2026,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "用刚体碰撞模拟两人近身互动，再渲染互遮挡画面并提供人体模型和相机标注，用于单图多人三维网格恢复。",
+    "modalities": [
+      "Synthetic RGB",
+      "Depth",
+      "Segmentation",
+      "Video"
+    ],
+    "annotations": [
+      "作者论文列出逐帧 SMPL-X 与由其转换的 SMPL 姿态、体形、平移",
+      "相机内外参、深度图和分割掩码；本文网格恢复训练未使用深度或分割",
+      "仿真接触法向和冲量未列为发布标注"
+    ],
+    "scale": "论文报告 25,000 段双人序列（24,000 训练，1,000 测试），每段 12 帧、30 fps，合计 300,000 帧；生成管线能做更多人，但不是本次发布规模。",
+    "access": "Hugging Face 官方全量仓库公开且未标为 gated，文件列表约 713 GB，含 25 个 TAR 分片、约 192 MB 训练与 13 MB 测试 SMPL NPZ。作者链接的独立样例页匿名访问返回 401；具体权限原因及内容未核实。未下载或解包。",
+    "license": "全量数据卡和公开元数据未列明独立数据许可。作者 GitHub 的 CC BY-NC 4.0 针对代码及 HMR 权重，不自动涵盖渲染数据。AMASS、SMPL、SynBody 与 HDRI 等上游素材依原条款；用途或再分发前向作者核实。",
+    "url": "https://huggingface.co/datasets/cisyn/cisyn/tree/main",
+    "sources": [
+      "https://huggingface.co/api/datasets/cisyn/cisyn",
+      "https://huggingface.co/api/datasets/cisyn/cisyn/tree/main",
+      "https://github.com/yfde/CISyn#license",
+      "https://arxiv.org/html/2611.18894v1#S3.SS1",
+      "https://arxiv.org/html/2611.18894v1#S3.T2",
+      "https://arxiv.org/html/2611.18894v1#A6"
+    ],
+    "notes": "原文图 2 可查看生成流程，图 3 可查看渲染示例。双角色仿真包含接触与遮挡，但模拟者缺少目标导向控制，不等同于真实运动捕捉。论文表 2 在同架构、同续训日程下将 CISyn 加入 MA-HMR，Hi4D 的指定对子集根相对 MPJPE 由 61.2 变为 54.8 mm；统计只覆盖成功匹配的人，不是完整基准排行榜。",
+    "verified_at": "2026-11-22",
+    "papers": [
+      {
+        "title": "CISyn: Human Mesh Recovery in Close Interactions with Physics-Simulated Synthetic Data",
+        "url": "https://arxiv.org/abs/2611.18894v1",
+        "venue": "arXiv",
+        "year": 2026
       }
     ]
   }

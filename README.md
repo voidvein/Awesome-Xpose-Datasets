@@ -4,7 +4,12 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 [Browse the site](https://voidvein.github.io/Awesome-Xpose-Datasets/) · [Pose research companion](https://voidvein.github.io/Awesome-Xpose-estimation/)
 
-## 最近更新 · 2026-11-23（UTC+8）
+## 最近更新 · 2026-11-24（UTC+8）
+
+- **新增 2 个：** [MoviCam](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=movicam) · [CISyn](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=cisyn)。当前共 69 个。MoviCam 归档标注 CC0；CISyn 数据许可未确证，不沿用代码或权重许可。
+- **补全 3 个已有详情：** [BIWI Kinect Head Pose](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=biwi-kinect-head-pose) · [AFLW2000-3D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=aflw2000-3d) · [3DPW](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=3dpw)，补充下游评测及其限制，不计作新增。
+
+### 2026-11-23
 
 - **新增 1 个：** [OpenCap LabValidation](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=opencap-labvalidation)，区分含／不含视频的数据包与后续单目评测子集。当前共 67 个。
 - **更新已有详情：** [Ego-Exo4D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=ego-exo4d) 新增 EgoH4 与 EggHand 两篇下游研究，区分三维手部姿态预测和官方 EgoPose。
@@ -20,7 +25,7 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 ## Scope
 
-67 datasets: Head 18, Hand 23, Human 27 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
+69 datasets: Head 18, Hand 23, Human 29 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
 
 ## Run and validate
 
@@ -88,6 +93,9 @@ Run `node --check app.js && node scripts/test.cjs`.
 - **[NYU Hand Pose](https://jonathantompson.github.io/NYU_Hand_Pose_Dataset.htm)** · 2014 · 2D/3D — 三视角 RGB-D 手姿基准，提供实拍与合成重建，适合深度姿态估计。
 
 ### Human
+
+- **[MoviCam](https://doi.org/10.17617/3.DGK9OM)** · 2026 · 3D — 用动态单目 RGB 实拍平地与非平地上的人体运动，配套三维动捕、全局相机轨迹、非平地场景网格和足部接触标注，可分别检验关节误差、全局轨迹漂移与脚部滑移。
+- **[CISyn](https://huggingface.co/datasets/cisyn/cisyn/tree/main)** · 2026 · 3D — 用刚体碰撞模拟两人近身互动，再渲染互遮挡画面并提供人体模型和相机标注，用于单图多人三维网格恢复。
 
 - **[OpenCap LabValidation](https://simtk.org/frs/?group_id=2385#pack_2354)** · 2023 · 3D — 面向人体动作生物力学验证的多视角手机 RGB 视频、光学动作捕捉与测力数据；该条目指实验室验证包，不包含另行发布的现场研究。
 
