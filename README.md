@@ -4,7 +4,11 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 [Browse the site](https://voidvein.github.io/Awesome-Xpose-Datasets/) · [Pose research companion](https://voidvein.github.io/Awesome-Xpose-estimation/)
 
-## 最近更新 · 2026-11-24（UTC+8）
+## 最近更新 · 2026-11-25（UTC+8）
+
+- **补全 8 个已有详情：** [HOT3D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=hot3d) · [ARCTIC](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=arctic) · [HOI4D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=hoi4d) · [OakInk](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=oakink) · [DexYCB](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=dexycb) · [300W-LP](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=300w-lp) · [BIWI Kinect Head Pose](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=biwi-kinect-head-pose) · [AFLW2000-3D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=aflw2000-3d)。新增下游论文与评测口径，不新增数据集；当前共 69 个。
+
+### 2026-11-24
 
 - **新增 2 个：** [MoviCam](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=movicam) · [CISyn](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=cisyn)。当前共 69 个。MoviCam 归档标注 CC0；CISyn 数据许可未确证，不沿用代码或权重许可。
 - **补全 3 个已有详情：** [BIWI Kinect Head Pose](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=biwi-kinect-head-pose) · [AFLW2000-3D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=aflw2000-3d) · [3DPW](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=3dpw)，补充下游评测及其限制，不计作新增。

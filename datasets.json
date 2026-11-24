@@ -333,11 +333,14 @@
     "license": "不同数据组件许可需单独核对；本轮未完整核实",
     "url": "https://facebookresearch.github.io/hot3d/",
     "sources": [
-      "https://facebookresearch.github.io/hot3d/"
+      "https://facebookresearch.github.io/hot3d/",
+      "https://arxiv.org/html/2605.18553v2#S4",
+      "https://arxiv.org/html/2605.18553v2#A8",
+      "https://github.com/huajian-zeng/stablehand/blob/main/docs/enhanced_version.md"
     ],
-    "notes": "2024 首次公开，正式论文 CVPR 2025；不要把发布时间与论文年份混用。",
+    "notes": "2024 首次公开，正式论文 CVPR 2025；不要把发布时间与论文年份混用。 下游 StableHand 在 244 个 150 帧测试片段上评估世界坐标双手重建，纳入检测失败但真值有效的手部帧。v2 表 1 的 W-MPJPE 为 57.83 mm（HaWoR 71.89 mm），世界坐标以首帧相机为锚、重力对齐，但不事后拟合对齐；只扣除逐帧腕部平移的是另一指标 WA-MPJPE。作者代码文档的 45.19 mm 是另行发布的增强版，不是原论文数字，也不代表原数据集榜单。",
     "paper": "https://arxiv.org/abs/2411.19167",
-    "verified_at": "2026-11-18",
+    "verified_at": "2026-11-24",
     "papers": [
       {
         "title": "HOT3D: Hand and Object Tracking in 3D from Egocentric Multi-View Videos",
@@ -350,6 +353,12 @@
         "url": "https://arxiv.org/abs/2406.09598",
         "venue": "arXiv",
         "year": 2024
+      },
+      {
+        "title": "StableHand: Quality-Aware Flow Matching for World-Space Dual-Hand Motion Estimation from Egocentric Video",
+        "url": "https://arxiv.org/html/2605.18553v2",
+        "venue": "NeurIPS（已接收）",
+        "year": 2026
       }
     ]
   },
@@ -431,10 +440,13 @@
     "url": "https://arctic.is.tue.mpg.de/",
     "sources": [
       "https://arctic.is.tue.mpg.de/",
-      "https://arctic.is.tue.mpg.de/license.html"
+      "https://arctic.is.tue.mpg.de/license.html",
+      "https://arxiv.org/html/2605.18553v2#A7",
+      "https://arxiv.org/html/2605.18553v2#S4",
+      "https://github.com/huajian-zeng/stablehand/blob/main/docs/enhanced_version.md"
     ],
-    "notes": "不能把渲染深度当作实测深度；使用前检查模型与数据各自条款。",
-    "verified_at": "2026-11-18",
+    "notes": "不能把渲染深度当作实测深度；使用前检查模型与数据各自条款。 下游 StableHand 的 P2 结果来自 s05 验证者的第一视角视频（34 段切成 155 个 150 帧片段），不是私有排行榜测试者 s03；s05 也排除在论文的多数据集质量网络预训练之外。v2 表 2 报告 W-MPJPE 124.59 mm（HMP-SLAM 166.21 mm）；双手均有效时的腕间相对误差 MRRPE 为 93.71 mm（HaWoR 112.36 mm）。增强版文档的 92.52 mm 另列，不能视为论文原方法或私榜成绩。",
+    "verified_at": "2026-11-24",
     "images": [
       {
         "kind": "page-screenshot",
@@ -456,6 +468,12 @@
         "url": "https://arxiv.org/abs/2204.13662",
         "venue": "CVPR",
         "year": 2023
+      },
+      {
+        "title": "StableHand: Quality-Aware Flow Matching for World-Space Dual-Hand Motion Estimation from Egocentric Video",
+        "url": "https://arxiv.org/html/2605.18553v2",
+        "venue": "NeurIPS（已接收）",
+        "year": 2026
       }
     ]
   },
@@ -858,10 +876,12 @@
     "license": "数据许可未核实；以官方数据条款为准，不沿用代码或网页模板许可证",
     "url": "https://hoi4d.github.io/",
     "sources": [
-      "https://hoi4d.github.io/"
+      "https://hoi4d.github.io/",
+      "https://arxiv.org/html/2611.08578v1#S5.T2",
+      "https://arxiv.org/html/2611.08578v1#S5.T3"
     ],
-    "notes": "官方主页当前写 9 人，早期摘要可能写 4 人；记录采用当前主页口径。",
-    "verified_at": "2026-11-18",
+    "notes": "官方主页当前写 9 人，早期摘要可能写 4 人；记录采用当前主页口径。 下游 HaNDF 表 2 给各重建方法真值物体几何；AlignSDF 加先验后手部 MPJPE 10.60→10.43 mm。表 3 使用 AlignSDF 预测的物体、不做物体检索或优化时为 12.08→11.74 mm；两表不是同一输入协议。",
+    "verified_at": "2026-11-24",
     "images": [
       {
         "kind": "page-screenshot",
@@ -883,6 +903,12 @@
         "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Liu_HOI4D_A_4D_Egocentric_Dataset_for_Category-Level_Human-Object_Interaction_CVPR_2022_paper.html",
         "venue": "CVPR",
         "year": 2022
+      },
+      {
+        "title": "HaNDF: Object-Conditioned Geometric Neural Hand Distance Fields",
+        "url": "https://arxiv.org/html/2611.08578v1",
+        "venue": "NeurIPS（已接收）",
+        "year": 2026
       }
     ]
   },
@@ -911,10 +937,11 @@
     "url": "https://oakink.net/",
     "sources": [
       "https://oakink.net/",
-      "https://github.com/oakink/OakInk/blob/main/docs/datasets.md"
+      "https://github.com/oakink/OakInk/blob/main/docs/datasets.md",
+      "https://arxiv.org/html/2611.08578v1#S5.T2"
     ],
-    "notes": "项目摘要旧口径为 230K 图像/50K 姿态；本条采用工具包完整版本，切分会过滤部分视野外关键点。",
-    "verified_at": "2026-11-18",
+    "notes": "项目摘要旧口径为 230K 图像/50K 姿态；本条采用工具包完整版本，切分会过滤部分视野外关键点。 HaNDF 的表 2 使用 OakInk 原版并给各方法真值物体几何。AlignSDF 加条件先验后 MPJPE 10.50→10.17 mm，但网格相交体积指标 0.82→0.87；不要与 OakInk2 或预测物体设置混比。",
+    "verified_at": "2026-11-24",
     "images": [
       {
         "kind": "page-screenshot",
@@ -936,6 +963,12 @@
         "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Yang_OakInk_A_Large-Scale_Knowledge_Repository_for_Understanding_Hand-Object_Interaction_CVPR_2022_paper.html",
         "venue": "CVPR",
         "year": 2022
+      },
+      {
+        "title": "HaNDF: Object-Conditioned Geometric Neural Hand Distance Fields",
+        "url": "https://arxiv.org/html/2611.08578v1",
+        "venue": "NeurIPS（已接收）",
+        "year": 2026
       }
     ]
   },
@@ -1067,10 +1100,11 @@
     "license": "CC BY-NC 4.0",
     "url": "https://dex-ycb.github.io/",
     "sources": [
-      "https://dex-ycb.github.io/"
+      "https://dex-ycb.github.io/",
+      "https://arxiv.org/html/2611.08578v1#S5.T2"
     ],
-    "notes": "区分各评测划分和 MANO 外部模型许可。",
-    "verified_at": "2026-11-18",
+    "notes": "区分各评测划分和 MANO 外部模型许可。 HaNDF 的单图下游表 2 给各方法真值物体几何；AlignSDF 的手部 MPJPE 17.19→16.97 mm。该数字衡量已知物体条件下的手部修正，不是预测物体重建的成绩。",
+    "verified_at": "2026-11-24",
     "images": [
       {
         "kind": "page-screenshot",
@@ -1092,6 +1126,12 @@
         "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Chao_DexYCB_A_Benchmark_for_Capturing_Hand_Grasping_of_Objects_CVPR_2021_paper.html",
         "venue": "CVPR",
         "year": 2021
+      },
+      {
+        "title": "HaNDF: Object-Conditioned Geometric Neural Hand Distance Fields",
+        "url": "https://arxiv.org/html/2611.08578v1",
+        "venue": "NeurIPS（已接收）",
+        "year": 2026
       }
     ]
   },
@@ -2096,10 +2136,11 @@
     "url": "https://xiangyuzhu-open.github.io/homepage/",
     "sources": [
       "https://xiangyuzhu-open.github.io/homepage/",
-      "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf"
+      "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf",
+      "https://www.mdpi.com/2076-3417/16/21/10839"
     ],
-    "notes": "合成扩增与原 300-W 图像有血缘关系，拆分时避免泄漏。",
-    "verified_at": "2026-11-18",
+    "notes": "合成扩增与原 300-W 图像有血缘关系，拆分时避免泄漏。 Herjuno 与 Horio 在相同 6DRepNet 主干比较 300W-LP 与加入合成训练图：BIWI 测试 10.60°→8.63°，AFLW2000 6.90°→8.30°（测地角误差）；不能把训练增强视作两域均获益。",
+    "verified_at": "2026-11-24",
     "paper": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf",
     "papers": [
       {
@@ -2107,6 +2148,12 @@
         "url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Zhu_Face_Alignment_Across_CVPR_2016_paper.html",
         "venue": "CVPR",
         "year": 2016
+      },
+      {
+        "title": "Mitigating Data Imbalance in Head Pose Estimation Through Diffusion Model Generated Synthetic Data with Pose Reference",
+        "url": "https://doi.org/10.3390/app162110839",
+        "venue": "Applied Sciences",
+        "year": 2026
       }
     ]
   },
@@ -2134,10 +2181,11 @@
     "sources": [
       "https://xiangyuzhu-open.github.io/homepage/",
       "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf",
-      "https://arxiv.org/html/2607.02565v1#S4.T5"
+      "https://arxiv.org/html/2607.02565v1#S4.T5",
+      "https://www.mdpi.com/2076-3417/16/21/10839"
     ],
-    "notes": "标注来自三维拟合，不是三维扫描实测。\n\n下游评测：ECCV 2026 的保形覆盖率研究用 SixDRepNet 在其报告的 1,969 个 AFLW2000-3D 样本上评估（非目录标称的 2,000 张），其中 278 个落在 |俯仰| > 60° 切片。表 5 中欧拉、测地与归一化测地的切片覆盖率分别为 55.2%、75.1% 和 80.3%；这是基于点预测的集合覆盖，不是头姿角度误差或 AFLW2000-3D 的通用排名。",
-    "verified_at": "2026-11-18",
+    "notes": "标注来自三维拟合，不是三维扫描实测。\n\n下游评测：ECCV 2026 的保形覆盖率研究用 SixDRepNet 在其报告的 1,969 个 AFLW2000-3D 样本上评估（非目录标称的 2,000 张），其中 278 个落在 |俯仰| > 60° 切片。表 5 中欧拉、测地与归一化测地的切片覆盖率分别为 55.2%、75.1% 和 80.3%；这是基于点预测的集合覆盖，不是头姿角度误差或 AFLW2000-3D 的通用排名。 Herjuno 与 Horio 只用 AFLW2000 测试。6DRepNet 在 300W-LP 基础上加合成训练图使测地误差 6.90°→8.30°；若基础训练还包含 BIWI 训练集，变化为 8.68°→7.81°。",
+    "verified_at": "2026-11-24",
     "paper": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhu_Face_Alignment_Across_CVPR_2016_paper.pdf",
     "papers": [
       {
@@ -2150,6 +2198,12 @@
         "title": "Coordinate Singularities Break Conformal Coverage for Gaze and Head Pose",
         "url": "https://link.springer.com/chapter/10.1007/978-3-032-37252-9_17",
         "venue": "ECCV",
+        "year": 2026
+      },
+      {
+        "title": "Mitigating Data Imbalance in Head Pose Estimation Through Diffusion Model Generated Synthetic Data with Pose Reference",
+        "url": "https://doi.org/10.3390/app162110839",
+        "venue": "Applied Sciences",
         "year": 2026
       }
     ]
@@ -2549,10 +2603,11 @@
       "https://huggingface.co/datasets/ETHZurich/biwi_kinect_head_pose",
       "https://huggingface.co/datasets/ETHZurich/biwi_kinect_head_pose/blob/main/biwi_kinect_head_pose.py",
       "https://is.mpg.de/ps/publications/fdgf12",
-      "https://arxiv.org/html/2607.02565v1#S4.T2"
+      "https://arxiv.org/html/2607.02565v1#S4.T2",
+      "https://www.mdpi.com/2076-3417/16/21/10839"
     ],
-    "notes": "目录年份按加载脚本引用的 IJCV 2013 卷期（论文于 2012 年在线发表），不能视作首次数据公开年份。跨序列划分可能让同一人物进入训练与测试，应使用 sequence-to-subject 映射核查身份泄漏，并报告实际协议。旋转表示、坐标轴和角度约定须与官方标注一致。\n\n下游评测：ECCV 2026 的坐标奇点与保形覆盖率研究在 BIWI 真值旋转上人为注入等方性噪声，以隔离评分几何；不是从 BIWI 图像估计头姿。其表 2 在 |俯仰| > 60° 的切片报告欧拉评分 57.5%、测地评分 89.5%（名义目标 90%）。论文的 24 名被试写法与 ETHZ 加载器的 24 序列、20 名独立参与者不同；该实验如何处理重复身份未核实。",
-    "verified_at": "2026-11-18",
+    "notes": "目录年份按加载脚本引用的 IJCV 2013 卷期（论文于 2012 年在线发表），不能视作首次数据公开年份。跨序列划分可能让同一人物进入训练与测试，应使用 sequence-to-subject 映射核查身份泄漏，并报告实际协议。旋转表示、坐标轴和角度约定须与官方标注一致。\n\n下游评测：ECCV 2026 的坐标奇点与保形覆盖率研究在 BIWI 真值旋转上人为注入等方性噪声，以隔离评分几何；不是从 BIWI 图像估计头姿。其表 2 在 |俯仰| > 60° 的切片报告欧拉评分 57.5%、测地评分 89.5%（名义目标 90%）。论文的 24 名被试写法与 ETHZ 加载器的 24 序列、20 名独立参与者不同；该实验如何处理重复身份未核实。 Herjuno 与 Horio 按主体划分 BIWI（11,576 张训练、3,903 张测试）。6DRepNet 未用 BIWI 训练时加合成图使 BIWI 测试 10.60°→8.63°；若已有 BIWI 训练图，4.59°→4.69°。不要把两配方当作同一基线。",
+    "verified_at": "2026-11-24",
     "papers": [
       {
         "title": "Random Forests for Real Time 3D Face Analysis",
@@ -2564,6 +2619,12 @@
         "title": "Coordinate Singularities Break Conformal Coverage for Gaze and Head Pose",
         "url": "https://link.springer.com/chapter/10.1007/978-3-032-37252-9_17",
         "venue": "ECCV",
+        "year": 2026
+      },
+      {
+        "title": "Mitigating Data Imbalance in Head Pose Estimation Through Diffusion Model Generated Synthetic Data with Pose Reference",
+        "url": "https://doi.org/10.3390/app162110839",
+        "venue": "Applied Sciences",
         "year": 2026
       }
     ]
