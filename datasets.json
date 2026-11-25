@@ -1095,16 +1095,19 @@
       "3D 手姿",
       "6D 物体姿态"
     ],
-    "scale": "官方完整压缩包 119 GB；帧数本轮未核实",
+    "scale": "1,000 段抓握序列、10 人、20 种抓握对象、8 个 RGB-D 视角；581,968 个视角帧、508,384 条手部标注。",
     "access": "官网整包或分主体下载",
     "license": "CC BY-NC 4.0",
     "url": "https://dex-ycb.github.io/",
     "sources": [
       "https://dex-ycb.github.io/",
-      "https://arxiv.org/html/2611.08578v1#S5.T2"
+      "https://arxiv.org/html/2611.08578v1#S5.T2",
+      "https://dex-ycb.github.io/assets/chao_cvpr2021_supp.pdf",
+      "https://github.com/NVlabs/dex-ycb-toolkit/blob/master/dex_ycb_toolkit/dex_ycb.py",
+      "https://arxiv.org/html/2611.31812v1#S4"
     ],
-    "notes": "区分各评测划分和 MANO 外部模型许可。 HaNDF 的单图下游表 2 给各方法真值物体几何；AlignSDF 的手部 MPJPE 17.19→16.97 mm。该数字衡量已知物体条件下的手部修正，不是预测物体重建的成绩。",
-    "verified_at": "2026-11-24",
+    "notes": "区分各评测划分和 MANO 外部模型许可。 HaNDF 的单图下游表 2 给各方法真值物体几何；AlignSDF 的手部 MPJPE 17.19→16.97 mm。该数字衡量已知物体条件下的手部修正，不是预测物体重建的成绩。 S0 默认按序列（训练／验证／测试 800／40／160），训练涵盖全部 10 人，非未见人物测试。S1 按人物（7／1／2），S2 按相机（6／1／1），S3 按被抓握物体（15／2／3）；S3 的测试物体仍可能在训练图像中静置出现。HORCRUX 另一实验使用 S0 的抓握帧，报告 MJE 10.12 mm、PA-MJE 4.95 mm，物体用网格条件；不与已知物体条件下的 HaNDF 作直接排名。",
+    "verified_at": "2026-11-25",
     "images": [
       {
         "kind": "page-screenshot",
@@ -1131,6 +1134,12 @@
         "title": "HaNDF: Object-Conditioned Geometric Neural Hand Distance Fields",
         "url": "https://arxiv.org/html/2611.08578v1",
         "venue": "NeurIPS（已接收）",
+        "year": 2026
+      },
+      {
+        "title": "Generalizable Feed-Forward 3D Hand-Object Reconstruction with Coarse-to-Fine Contact Estimation",
+        "url": "https://arxiv.org/abs/2611.31812v1",
+        "venue": "arXiv（预印本）",
         "year": 2026
       }
     ]
@@ -1675,21 +1684,30 @@
       "二维关键点",
       "实例掩码"
     ],
-    "scale": "同时含关键点与掩码的评测子集：4,731 图、8,110 人",
-    "access": "官方 API 仓库提供数据说明",
-    "license": "待核实；公开可下载不等于可商用",
+    "scale": "原版关键点与掩码评测子集：4,731 图、8,110 个关键点实例；OCHuman-Pose 使用同一 4,731 图，补至 12,409 个实例（验证 6,546、测试 5,863）。",
+    "access": "官方 API 仓库提供数据说明 OCHuman-Pose 的验证与测试 JSON 可从作者 Hugging Face 文件列表查看；原图走原 OCHuman 入口。",
+    "license": "待核实；公开可下载不等于可商用 OCHuman-Pose 数据卡的 MIT 标签仅指新增标注文件，不替代原图或原始数据条款。",
     "url": "https://github.com/liruilong940607/OCHumanApi",
     "sources": [
-      "https://github.com/liruilong940607/OCHumanApi"
+      "https://github.com/liruilong940607/OCHumanApi",
+      "https://huggingface.co/datasets/vrg-prague/OCHuman-Pose",
+      "https://huggingface.co/datasets/vrg-prague/OCHuman-Pose/tree/main",
+      "https://mirapurkrabek.github.io/BBox-Mask-Pose/static/pdfs/IJCV26-BBoxMaskPose-v2.pdf#page=15"
     ],
-    "notes": "应区分完整资源与论文比较使用的交集子集。",
-    "verified_at": "2026-11-18",
+    "notes": "应区分完整资源与论文比较使用的交集子集。 OCHuman-Pose 只补 COCO 格式 17 点关键点，不增加图像、框或掩码，使用既有框；非常小的背景人物仍可能未标。BMPv2 作者稿表 9：同一标注版本内比较掩码提示，SAM 3D Body 在原标注用 BMPv2/RTMDet-L 得 54.8/40.0 AP，在新标注为 85.2/69.5；这是 3D 关节重投影的二维 AP，不是三维精度。",
+    "verified_at": "2026-11-25",
     "papers": [
       {
         "title": "Pose2Seg: Detection Free Human Instance Segmentation",
         "url": "https://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_Pose2Seg_Detection_Free_Human_Instance_Segmentation_CVPR_2019_paper.pdf",
         "venue": "CVPR",
         "year": 2019
+      },
+      {
+        "title": "BBoxMaskPose v2: Expanding Mutual Conditioning to 3D",
+        "url": "https://doi.org/10.1007/s11263-026-03113-6",
+        "venue": "IJCV",
+        "year": 2026
       }
     ]
   },
@@ -1718,10 +1736,11 @@
       "https://virtualhumans.mpi-inf.mpg.de/3DPW/",
       "https://virtualhumans.mpi-inf.mpg.de/3DPW/license.html",
       "https://www.mdpi.com/1424-8220/26/22/7283#sensors-26-07283-t003",
-      "https://www.mdpi.com/1424-8220/26/22/7283#sensors-26-07283-t008"
+      "https://www.mdpi.com/1424-8220/26/22/7283#sensors-26-07283-t008",
+      "https://arxiv.org/html/2611.26783v1#S4.SS2"
     ],
-    "notes": "下游协议：OA-Skeleton ST 用 OpenPose 置信度低于 0.3 标记缺失关节，在 3DPW 的 24 个测试视频上补全已知缺失位置，不是官方 3DPW 端到端姿态排行榜。以 IMU 辅助 SMPL 的可见关节三维参考为输入时，论文表 3 的缺失关节 MPJPE 为 79.1 mm，带运动学回退的插值为 92.8 mm；四个躯干基准关节不参与打分，人体坐标系不可构造时还有 7.4% 缺失关节帧被排除。改用 OpenPose → VideoPose3D 的三维输入时，针对提升器输出训练的变体和结构基线在表 8 的 PA-MPJPE 分别为 139.7 和 139.4 mm。注意两表的输入质量与对齐指标不同。",
-    "verified_at": "2026-11-22",
+    "notes": "下游协议：OA-Skeleton ST 用 OpenPose 置信度低于 0.3 标记缺失关节，在 3DPW 的 24 个测试视频上补全已知缺失位置，不是官方 3DPW 端到端姿态排行榜。以 IMU 辅助 SMPL 的可见关节三维参考为输入时，论文表 3 的缺失关节 MPJPE 为 79.1 mm，带运动学回退的插值为 92.8 mm；四个躯干基准关节不参与打分，人体坐标系不可构造时还有 7.4% 缺失关节帧被排除。改用 OpenPose → VideoPose3D 的三维输入时，针对提升器输出训练的变体和结构基线在表 8 的 PA-MPJPE 分别为 139.7 和 139.4 mm。注意两表的输入质量与对齐指标不同。 CADENCE 的同输入、14 个身体关节实验比较时序去抖前后：加速度误差 17.4→5.4 mm/s²、PA-MPJPE 41.9→40.2 mm；不评价手势或世界坐标精度。",
+    "verified_at": "2026-11-25",
     "images": [
       {
         "kind": "page-screenshot",
@@ -1748,6 +1767,12 @@
         "title": "Reconstructing Occluded Joints in 3D Human Pose Sequences: A Real-Occlusion Benchmark and an Interpolation-Initialised Spatio-Temporal Transformer",
         "url": "https://www.mdpi.com/1424-8220/26/22/7283",
         "venue": "Sensors",
+        "year": 2026
+      },
+      {
+        "title": "CADENCE: Temporally Coherent Whole-Body Human Mesh Recovery that Preserves Expressive Hand Motion",
+        "url": "https://arxiv.org/abs/2611.26783v1",
+        "venue": "arXiv（预印本）",
         "year": 2026
       }
     ]
@@ -3043,6 +3068,54 @@
         "title": "CISyn: Human Mesh Recovery in Close Interactions with Physics-Simulated Synthetic Data",
         "url": "https://arxiv.org/abs/2611.18894v1",
         "venue": "arXiv",
+        "year": 2026
+      }
+    ]
+  },
+  {
+    "id": "worldpose",
+    "name": "WorldPose",
+    "year": 2024,
+    "category": "Human",
+    "dimensions": [
+      "3D"
+    ],
+    "summary": "2022 世界杯转播场景的多人三维姿态与全局轨迹基准；固定多视角生成拟合参考，单目移动机位用于评测。",
+    "modalities": [
+      "RGB",
+      "Video",
+      "Multi-view"
+    ],
+    "annotations": [
+      "逐球员 SMPL 拟合、三维姿态及共享球场坐标轨迹",
+      "转播相机参数；固定多视角用于构建参考，不是所有基准的输入"
+    ],
+    "scale": "88 个转播片段、共 49.7 分钟，约 150,000 个 50 Hz 视频帧，超过 250 万个拟合球员姿态。88 是片段数，不是独立球员数。",
+    "access": "作者页面提供姿态及相机参数的学术申请入口。原始转播视频另需 FIFA 协议；申请页直连本轮超时，优先查看项目说明。未提交申请或下载。",
+    "license": "目前可核验为申请获取的学术资源，不标作开放许可或开放下载。姿态及相机与 FIFA 转播影像条款分别确认。",
+    "url": "https://eth-ait.github.io/WorldPoseDataset/#download",
+    "sources": [
+      "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2927_ECCV_2024_paper.php",
+      "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02927.pdf",
+      "https://eth-ait.github.io/WorldPoseDataset/#download",
+      "https://worldpose.ait.ethz.ch/",
+      "https://arxiv.org/html/2611.09882v1#S4.SS3",
+      "https://github.com/aadya-agrawal/FlowMoP#worldpose",
+      "https://voidvein.github.io/Awesome-Xpose-estimation/#paper=worldpose"
+    ],
+    "notes": "拟合参考不等于直接测量；六人 Vicon 试验单独报告精度。原始基准区分共享全局轨迹对齐与逐帧局部误差。下游 FlowMoP 用自有 25 Hz、按比赛分组的划分，以 1 秒观察预测 3 秒；表 3 的 best-of-6 三秒 JPE 在无邻居/10 邻居时为 1.87/1.82 m，不能与原始估计基准混比。",
+    "verified_at": "2026-11-25",
+    "papers": [
+      {
+        "title": "WorldPose: A World Cup Dataset for Global 3D Human Pose Estimation",
+        "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2927_ECCV_2024_paper.php",
+        "venue": "ECCV",
+        "year": 2024
+      },
+      {
+        "title": "FlowMoP: Stochastic Multi-Person Motion Prediction",
+        "url": "https://arxiv.org/abs/2611.09882v1",
+        "venue": "arXiv（下游预测）",
         "year": 2026
       }
     ]

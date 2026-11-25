@@ -4,7 +4,12 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 [Browse the site](https://voidvein.github.io/Awesome-Xpose-Datasets/) · [Pose research companion](https://voidvein.github.io/Awesome-Xpose-estimation/)
 
-## 最近更新 · 2026-11-25（UTC+8）
+## 最近更新 · 2026-11-26（UTC+8）
+
+- **新增 1 个：** [WorldPose](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=worldpose)。当前共 70 个。
+- **补全 3 个已有详情：** [OCHuman](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=ochuman) · [DexYCB](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=dexycb) · [3DPW](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=3dpw)，分别补标注版本、数据规模与划分、时序评测口径。
+
+### 2026-11-25
 
 - **补全 8 个已有详情：** [HOT3D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=hot3d) · [ARCTIC](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=arctic) · [HOI4D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=hoi4d) · [OakInk](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=oakink) · [DexYCB](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=dexycb) · [300W-LP](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=300w-lp) · [BIWI Kinect Head Pose](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=biwi-kinect-head-pose) · [AFLW2000-3D](https://voidvein.github.io/Awesome-Xpose-Datasets/#dataset=aflw2000-3d)。新增下游论文与评测口径，不新增数据集；当前共 69 个。
 
@@ -29,7 +34,7 @@ A curated index of Head, Hand and Human pose datasets for 2D and 3D research. �
 
 ## Scope
 
-69 datasets: Head 18, Hand 23, Human 29 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
+70 datasets: Head 18, Hand 23, Human 30 (multi-category entries count once in the total). Counts are catalogue coverage, not a complete field census. Dataset versions may have different scales, access requirements and licensing. This repository links to original data; it does not host or redistribute it.
 
 ## Run and validate
 
